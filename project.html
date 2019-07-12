@@ -31,9 +31,12 @@
             font-size: 50px;
         }
         div.search{
+            background-color: aquamarine;
             text-align: right;
+            margin: 10px auto;
+        }
+        div.search label{
             font-family: 'Jua', sans-serif;
-            margin: 10px;
         }
         div.main{
             display: flex;
@@ -44,12 +47,17 @@
             padding: 5px;
             border: 2px solid purple;
             border-radius: 20px;
-            width: 200px;
+            min-width: 230px;
             text-align: left;
             font-family: 'Jua', sans-serif;
         }
+        nav.listmenu legend{
+            font-size: 20px;
+        }
         nav.listmenu ul li {
             list-style: none;
+            display: block;
+            margin:10px;
         }
         nav.listmenu ul li a{
             text-decoration: none;
@@ -61,9 +69,10 @@
         section.imgmenu {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-template:  40px auto 40px;
+            grid-template-rows:  100px 50px 100px;
             grid-gap: 20px;
         }
+
         section.imgmenu p{
             font-family: 'Jua', sans-serif;
             text-align: center;
@@ -79,11 +88,12 @@
 </head>
 <body>
     <header>
-        <img src="../Team Project/images/logo.png" alt="PG.SC">
+        <img src="../Team-Project/images/logo.png" alt="PG.SC">
         <h2>Progamer Search</h2>
     </header>
     <div class="search">
-        <label for="p_name" class="fas fa-search"></label>
+        <p class="fas fa-search"></p>
+        <label for="p_name">선수검색</label>
         <input type="text" id="p_name" name="p_name">
         <button>검색</button>
     </div>
@@ -104,21 +114,21 @@
             </ul>
         </nav>
         <section class="imgmenu">
-            <a href="#"><img src="../Team Project/images/SKT T1.png" alt="SKT T1"></a>
-            <a href="#"><img src="../Team Project/images/Griffin.png" alt="Griffin"></a>
-            <a href="#"><img src="../Team Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a>
-            <a href="#"><img src="../Team Project/images/SANDBOX Gaiming.png" alt="SANDBOX Gaiming"></a>
-            <a href="#"><img src="../Team Project/images/DAMWON Gaiming.png" alt="DAMWON Gaiming"></a>
+            <a href="#"><img src="../Team-Project/images/SKT T1.png" alt="SKT T1"></a>
+            <a href="#"><img src="../Team-Project/images/Griffin.png" alt="Griffin"></a>
+            <a href="#"><img src="../Team-Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a>
+            <a href="#"><img src="../Team-Project/images/SANDBOX Gaiming.png" alt="SANDBOX Gaiming"></a>
+            <a href="#"><img src="../Team-Project/images/DAMWON Gaiming.png" alt="DAMWON Gaiming"></a>
             <p>SKT T1</p>
             <p>Griffin</p>
             <p>KZ Dragon-X</p>
             <p>SANDBOX Gaiming</p>
             <p>DAMWON Gaiming</p>
-            <a href="#"><img src="../Team Project/images/HanHwa Life Esports.png" alt="HanHwa Life Esports"></a>
-            <a href="#"><img src="../Team Project/images/Gen.G Esports.png" alt="Gen.G Esports"></a>
-            <a href="#"><img src="../Team Project/images/Jin Air Greenwings.png" alt="Jin Air Greenwings"></a>
-            <a href="#"><img src="../Team Project/images/Afreeca Freecs.png" alt="Afreeca Freecs"></a>
-            <a href="#"><img src="../Team Project/images/KT Rolster.png" alt="KT Rolster"></a>
+            <a href="#"><img src="../Team-Project/images/HanHwa Life Esports.png" alt="HanHwa Life Esports"></a>
+            <a href="#"><img src="../Team-Project/images/Gen.G Esports.png" alt="Gen.G Esports"></a>
+            <a href="#"><img src="../Team-Project/images/Jin Air Greenwings.png" alt="Jin Air Greenwings"></a>
+            <a href="#"><img src="../Team-Project/images/Afreeca Freecs.png" alt="Afreeca Freecs"></a>
+            <a href="#"><img src="../Team-Project/images/KT Rolster.png" alt="KT Rolster"></a>
             <p>HanHwa Life Esports</p>
             <p>Gen.G Esports</p>
             <p>Jin Air Greenwings</p>
