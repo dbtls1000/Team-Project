@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src='main.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        head,div,nav,footer{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: block;
+            background-color: lightgreen;
+            padding: 0.3rem;
+            font-family: 'Jua', sans-serif;
+        }
+        header img{
+            height: 60px;
+        }
+        header h2{
+            color : darkblue;
+            text-align: center;
+            font-size: 50px;
+        }
+        div.search{
+            text-align: right;
+            font-family: 'Jua', sans-serif;
+            margin: 10px;
+        }
+        div.main{
+            display: flex;
+        }
+        nav.listmenu{
+            display: block;
+            margin: 0;
+            padding: 5px;
+            border: 2px solid purple;
+            border-radius: 20px;
+            width: 200px;
+            text-align: left;
+            font-family: 'Jua', sans-serif;
+        }
+        nav.listmenu ul li {
+            list-style: none;
+        }
+        nav.listmenu ul li a{
+            text-decoration: none;
+        }
+        nav.listmenu ul li a:hover{
+            background-color: aqua;
+            cursor: pointer;
+        }
+        section.imgmenu {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template:  40px auto 40px;
+            grid-gap: 20px;
+        }
+        section.imgmenu p{
+            font-family: 'Jua', sans-serif;
+            text-align: center;
+        }
+        footer{
+            background-color: lightblue;
+            color:darkblue;
+            text-align: right;
+            padding:0.5rem;
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../Team Project/images/logo.png" alt="PG.SC">
+        <h2>Progamer Search</h2>
+    </header>
+    <div class="search">
+        <label for="p_name" class="fas fa-search"></label>
+        <input type="text" id="p_name" name="p_name">
+        <button>검색</button>
+    </div>
+    <div class="main">
+        <nav class="listmenu">
+            <legend>팀목록</legend>
+            <ul>
+                <li><a href="#">SKT T1</a></li>
+                <li><a href="#">Griffin</a></li>
+                <li><a href="#">KZ Dragon-X</a></li>
+                <li><a href="#">Damwon Gaiming</a></li>
+                <li><a href="#">SANDBOX Gaiming</a></li>
+                <li><a href="#">HanHwa Life Esports</a></li>
+                <li><a href="#">Gen.G Esports</a></li>
+                <li><a href="#">Afreeca Freecs</a></li>
+                <li><a href="#">Jin Air Greenwings</a></li>
+                <li><a href="#">KT Rolster</a></li>
+            </ul>
+        </nav>
+        <section class="imgmenu">
+            <a href="#"><img src="../Team Project/images/SKT T1.png" alt="SKT T1"></a>
+            <a href="#"><img src="../Team Project/images/Griffin.png" alt="Griffin"></a>
+            <a href="#"><img src="../Team Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a>
+            <a href="#"><img src="../Team Project/images/SANDBOX Gaiming.png" alt="SANDBOX Gaiming"></a>
+            <a href="#"><img src="../Team Project/images/DAMWON Gaiming.png" alt="DAMWON Gaiming"></a>
+            <p>SKT T1</p>
+            <p>Griffin</p>
+            <p>KZ Dragon-X</p>
+            <p>SANDBOX Gaiming</p>
+            <p>DAMWON Gaiming</p>
+            <a href="#"><img src="../Team Project/images/HanHwa Life Esports.png" alt="HanHwa Life Esports"></a>
+            <a href="#"><img src="../Team Project/images/Gen.G Esports.png" alt="Gen.G Esports"></a>
+            <a href="#"><img src="../Team Project/images/Jin Air Greenwings.png" alt="Jin Air Greenwings"></a>
+            <a href="#"><img src="../Team Project/images/Afreeca Freecs.png" alt="Afreeca Freecs"></a>
+            <a href="#"><img src="../Team Project/images/KT Rolster.png" alt="KT Rolster"></a>
+            <p>HanHwa Life Esports</p>
+            <p>Gen.G Esports</p>
+            <p>Jin Air Greenwings</p>
+            <p>Afreeca Freecs</p>
+            <p>KT Rolster</p>
+        </section>
+    </div>  
+    <footer>
+        <address>CopyRight &copy; </address>
+        <address>CopyRight &copy; whdtjr3973@naver.com</address>
+        <address>CopyRight &copy; dbsqhtjs@naver.com</address>
+    </footer>
+</body>
+</html>
