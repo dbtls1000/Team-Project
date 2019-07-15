@@ -17,13 +17,24 @@
             padding: 0;
         }
         header{
-            display: block;
+            display: flex;
             background-color: lightgreen;
-            padding: 0.3rem;
             font-family: 'Jua', sans-serif;
+            align-items: flex-end;
+            justify-content: space-between;
         }
-        header p{
+        header ul{
+            display: flex;
+        }
+        header ul li{
+            display: block;
+            list-style: none;
             text-align: right;
+            margin: 0;
+        }
+        header ul li a{
+            margin: 0 10px;
+            text-decoration: none;
         }
         header img{
             height: 60px;
@@ -31,27 +42,41 @@
         header h2{
             color : darkblue;
             text-align: center;
-            font-size: 50px;
+            font-size: 45px;
         }
-        div.search{
+        nav.search{
+            display: flex;
             background-color: aquamarine;
-            text-align: right;
-            margin: 10px auto;
-        }
-        div.search label{
+            margin: 0 0 10px 0;
+            justify-content: space-between;
+            align-items: flex-end;
             font-family: 'Jua', sans-serif;
         }
-        div.search ul{
+        div.search-box{
+            display: block;
+        }
+        div.search-box button{
+            border: 0;
+            background: orchid;
+            margin: 0;
+            text-align: center;
+            border: 1px solid purple;
+            padding: 1px 6px;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        nav.search ul{
             display: flex;
         }
-        div.search ul li{
+        nav.search ul li{
             display: block;
             list-style: none;
-            font-family: 'Jua', sans-serif;
             color: darkblue;
             font-size: 20px;
         }
-        div.search ul li a {
+        nav.search ul li a {
             list-style: none;
             text-decoration: none;
             text-align: left;
@@ -82,7 +107,7 @@
         nav.listmenu ul li {
             list-style: none;
             display: block;
-            margin:10px;
+            margin:13px;
             color: darkblue;
         }
         nav.listmenu ul li a{
@@ -95,7 +120,7 @@
         }
         table.imgmenu {
             text-align: center;
-            border-spacing: 30px 0;
+            border-spacing: 50px 0;
             display: block;
             margin: 30px;
             padding: 10px;
@@ -106,7 +131,7 @@
             text-align: center;
         }
         div.advertisement{
-            display: block;
+            display: flex;
             margin: 10px auto;
             height: 200px;
             border: 1px solid black;
@@ -124,26 +149,26 @@
 <body>
     <header>
         <a href="#"><img src="../Team-Project/images/logo.png" alt="PG.SC"></a>
-        <a href="#"><p>로그인</p></a>
         <h2>Progamer Search</h2>
+        <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+        </ul>
     </header>
-    <div class="search">
+    <nav class="search">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">새소식</a></li>
-            <li><a href="#">선수DB</a></li>
-            <li><a href="#">포지션별DB</a></li>
             <li><a href="#">리그 일정</a></li>
             <li><a href="#">리그 순위</a></li>
             <li><a href="#">게시판</a></li>
         </ul>
-        
+        <div class="search-box">
         <p class="fas fa-search"></p>
-        <label for="p_name">선수검색</label>
-        <input type="text" id="p_name" name="p_name">
+        <input type="text" id="p_name" name="p_name" placeholder="선수이름">
         <button>검색</button>
-        
-    </div>
+        </div>
+    </nav>
     <div class="main">
         <nav class="listmenu">
             <p>팀목록</p>
@@ -151,8 +176,8 @@
                 <li><a href="#">SKT T1</a></li>
                 <li><a href="#">Griffin</a></li>
                 <li><a href="#">KZ Dragon-X</a></li>
-                <li><a href="#">SANDBOX Gaiming</a></li>
-                <li><a href="#">Damwon Gaiming</a></li>
+                <li><a href="#">SANDBOX Gaming</a></li>
+                <li><a href="#">DAMWON Gaming</a></li>
                 <li><a href="#">HanHwa Life Esports</a></li>
                 <li><a href="#">Gen.G Esports</a></li>
                 <li><a href="#">Jin Air Greenwings</a></li>
@@ -168,8 +193,8 @@
                 <td><a href="#"><img src="../Team-Project/images/SKT T1.png" alt="SKT T1"></a></td>
                 <td><a href="#"><img src="../Team-Project/images/Griffin.png" alt="Griffin"></a></td>
                 <td><a href="#"><img src="../Team-Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/SANDBOX Gaiming.png" alt="SANDBOX Gaiming"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/DAMWON Gaiming.png" alt="DAMWON Gaiming"></a></td>
+                <td><a href="#"><img src="../Team-Project/images/SANDBOX Gaming.png" alt="SANDBOX Gaiming"></a></td>
+                <td><a href="#"><img src="../Team-Project/images/DAMWON Gaming.png" alt="DAMWON Gaiming"></a></td>
             </tr>
             <tr>
                 <td><p>SKT T1</p></td>
@@ -195,7 +220,6 @@
         </table>
     </div>
     <div class="advertisement">
-
     </div>
     <footer>
         <address>CopyRight &copy; </address>
