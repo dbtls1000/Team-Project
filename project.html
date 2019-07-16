@@ -18,7 +18,8 @@
         }
         header{
             display: flex;
-            background-color: lightgreen;
+            background-image: url("../Team-project/images/header.png");
+            background-size: 33% 100%;
             font-family: 'Jua', sans-serif;
             align-items: flex-start;
             justify-content: space-between;
@@ -41,8 +42,7 @@
         }
         header h2{
             color : darkblue;
-            text-align: center;
-            font-size: 45px;
+            font-size: 50px;
         }
         nav.search{
             display: flex;
@@ -52,21 +52,7 @@
             align-items: center;
             font-family: 'Jua', sans-serif;
         }
-        div.search-box{
-            display: block;
-        }
-        div.search-box button{
-            border: 0;
-            background: orchid;
-            margin: 0;
-            text-align: center;
-            border: 1px solid purple;
-            padding: 1px 6px;
-            outline: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: white;
-        }
+       
         nav.search ul{
             display: flex;
         }
@@ -79,9 +65,22 @@
         nav.search ul li a {
             list-style: none;
             text-decoration: none;
-            text-align: left;
             margin: 0 10px;
             color: inherit;
+        }
+        div.search-box{
+            display: block;
+        }
+        div.search-box button{
+            border: 0;
+            background: orchid;
+            margin: 0;
+            border: 1px solid purple;
+            padding: 1px 6px;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
         }
         div.main{
             display: flex;
@@ -118,25 +117,57 @@
             background-color: aqua;
             cursor: pointer;
         }
-        table.imgmenu {
-            text-align: center;
-            border-spacing: 50px 0;
-            display: block;
-            margin: 30px;
-            padding: 10px;
+        div.imgmenu {
+            display: grid;
+            grid-template-columns: repeat(4,200px);
+            grid-template-rows: 120px 50px 120px 50px 120px 50px;
         }
-        
-        table.imgmenu p{
+        aside{
+            height: 520px;
+            margin: 0 3px;
+        }
+        aside.img{
+            width: 342px;
+            background-image: url("../Team-project/images/페이커.png");
+        }
+        div.imgmenu {
             font-family: 'Jua', sans-serif;
+            
             text-align: center;
+            color: darkblue;
+        }
+        div.imgmenu a {
+            text-decoration: none;
+            color: inherit;
+        }
+        #item1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #item2{
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        #item3{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #item4{
+            grid-column-start: 3;
+            grid-column-end: 5;
         }
         div.advertisement{
             display: flex;
             margin: 10px auto;
-            height: 200px;
-            border: 1px solid black;
+            width:1300px;
+            height: 300px;
+        }
+        div.advertisement img{
+            width: 50%;
         }
         footer{
+            position:absolute;
+            width: 100%;
             margin-top: 30px;
             background-color: lightblue;
             color:darkblue;
@@ -188,41 +219,38 @@
         <aside>
 
         </aside>
-        <table class="imgmenu">
-            <tr>
-                <td><a href="#"><img src="../Team-Project/images/SKT T1.png" alt="SKT T1"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Griffin.png" alt="Griffin"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/SANDBOX Gaming.png" alt="SANDBOX Gaiming"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/DAMWON Gaming.png" alt="DAMWON Gaiming"></a></td>
-            </tr>
-            <tr>
-                <td><p>SKT T1</p></td>
-                <td><p>Griffin</p></td>
-                <td><p>KZ Dragon-X</p></td>
-                <td><p>SANDBOX Gaiming</p></td>
-                <td><p>DAMWON Gaiming</p></td>
-            </tr>
-            <tr>
-                <td><a href="#"><img src="../Team-Project/images/HanHwa Life Esports.png" alt="HanHwa Life Esports"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Gen.G Esports.png" alt="Gen.G Esports"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Jin Air Greenwings.png" alt="Jin Air Greenwings"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Afreeca Freecs.png" alt="Afreeca Freecs"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/KT Rolster.png" alt="KT Rolster"></a></td>
-            </tr>
-            <tr>
-                <td><p>HanHwa Life Esports</p></td>
-                <td><p>Gen.G Esports</p></td>
-                <td><p>Jin Air Greenwings</p></td>
-                <td><p>Afreeca Freecs</p></td>
-                <td><p>KT Rolster</p></td>
-            </tr>
-        </table>
+        <div class="imgmenu">
+            <a href="#"><img src="../Team-Project/images/SKT T1.png" alt="SKT T1"></a>
+            <a href="#"><img src="../Team-Project/images/Griffin.png" alt="Griffin"></a>
+            <a href="#"><img src="../Team-Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a>
+            <a href="#"><img src="../Team-Project/images/SANDBOX Gaming.png" alt="SANDBOX Gaiming"></a>
+            <a href="#">SKT T1</a>
+            <a href="#">Griffin</a>
+            <a href="#">KZ Dragon-X</a>
+            <a href="#">SANDBOX Gaming</a>
+            <a href="#"><img src="../Team-Project/images/HanHwa Life Esports.png" alt="HanHwa Life Esports"></a>
+            <a href="#"><img src="../Team-Project/images/Gen.G Esports.png" alt="Gen.G Esports"></a>
+            <a href="#"><img src="../Team-Project/images/Jin Air Greenwings.png" alt="Jin Air Greenwings"></a>
+            <a href="#"><img src="../Team-Project/images/Afreeca Freecs.png" alt="Afreeca Freecs"></a>
+            <a href="#">HanHwa Life Esports</a>
+            <a href="#">Gen.G Esports</a>
+            <a href="#">Jin Air Greenwings</a>
+            <a href="#">Afreeca Freecs</a>
+            <a href="#" id="item1"><img src="../Team-Project/images/DAMWON Gaming.png" alt="DAMWON Gaiming"></a>
+            <a href="#" id="item2"><img src="../Team-Project/images/KT Rolster.png" alt="KT Rolster"></a>
+            <a href="#" id="item3">DAMWON Gaming</a>
+            <a href="#" id="item4">KT Rolster</a>
+        </div>
+        <aside class="img">
+
+        </aside>
     </div>
     <div class="advertisement">
+        <img src="../Team-Project/images/ad.gif" alt="">
+        <img src="../Team-Project/images/ad2.gif" alt="">
     </div>
     <footer>
-        <address>CopyRight &copy; </address>
+        <address>CopyRight &copy; duawowkd@naver.com</address>
         <address>CopyRight &copy; whdtjr3973@naver.com</address>
         <address>CopyRight &copy; dbsqhtjs@naver.com</address>
     </footer>
