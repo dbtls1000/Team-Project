@@ -8,56 +8,62 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 <style>
-    table td{
+    div{
+        display: grid;
+        grid-template-columns: repeat(5,200px);
+        grid-template-rows: 120px 50px 120px 50px 50px 120px 50px 120px 50px;
+        width: 70%;
+    }
+    #item1,#item2{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        text-align: center;
+    }
+    #item3,#item5{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+    #item4,#item6{
+        grid-column-start: 3;
+        grid-column-end: 6;
         text-align: center;
     }
 </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>HeadCoach</th>
-            <th>Coach</th>
-            <th>TOP</th>
-            <th>JG</th>
-            <th>MID</th>
-            <th>BOT</th>
-            <th>SPT</th>
-        </tr>
-        <tr>
-            <td rowspan="3"><img src="../Team-Project/images/김정균.png"></td>
-            <td><img src="../Team-Project/images/김상철.png"></td>
-            <td><img src="../Team-Project/images/Khan.png"></td>
-            <td><img src="../Team-Project/images/Clid.png"></td>
-            <td><img src="../Team-Project/images/Faker.png"></td>
-            <td><img src="../Team-Project/images/Teddy.png"></td>
-            <td><img src="../Team-Project/images/Mata.png"></td>
-        </tr>
-        <tr>
-            <td>김상철</td>
-            <td>Khan</td>
-            <td>Clid</td>
-            <td>Faker</td>
-            <td>Teddy</td>
-            <td>Mata</td>
-        </tr>
-        <tr>
-            <td><img src="../Team-Project/images/이재민.png"></td>
-            <td><img src="../Team-Project/images/Crazy.png"></td>
-            <td><img src="../Team-Project/images/Haru.png"></td>
-            <td><img src="../Team-Project/images/Gori.png"></td>
-            <td><img src="../Team-Project/images/Leo.png"></td>
-            <td><img src="../Team-Project/images/Effort.png"></td>
-        </tr>
-        <tr>
-            <td>김정균</td>
-            <td>이재민</td>
-            <td>Crazy</td>
-            <td>Haru</td>
-            <td>Gori</td>
-            <td>Leo</td>
-            <td>Effort</td>
-        </tr>
-    </table>
+    <div>
+        <a href="#" id="item1"><img src="../Team-Project/images/김정균.png"></a>
+        <a href="#" id="item2">김정균</a>
+        <a href="#" id="item3"><img src="../Team-Project/images/김상철.png"></a>
+        <a href="#" id="item4"><img src="../Team-Project/images/이재민.png"></a>
+        <a href="#" id="item5">김상철</a>
+        <a href="#" id="item6">이재민</a>
+        <a>TOP</a>
+        <a>JG</a>
+        <a>MID</a>
+        <a>BOT</a>
+        <a>SPT</a>
+        <a href="#"><img src="../Team-Project/images/Khan.png"></a>
+        <a href="#"><img src="../Team-Project/images/Clid.png"></a>
+        <a href="#"><img src="../Team-Project/images/Faker.png"></a>
+        <a href="#"><img src="../Team-Project/images/Teddy.png"></a>
+        <a href="#"><img src="../Team-Project/images/Mata.png"></a>
+        <a href="#">Khan</a>
+        <a href="#">Clid</a>
+        <a href="#">Faker</a>
+        <a href="#">Teddy</a>
+        <a href="#">Mata</a>
+        <a href="#"><img src="../Team-Project/images/Crazy.png"></a>
+        <a href="#"><img src="../Team-Project/images/Haru.png"></a>
+        <a href="#"><img src="../Team-Project/images/Gori.png"></a>
+        <a href="#"><img src="../Team-Project/images/Leo.png"></a>
+        <a href="#"><img src="../Team-Project/images/Effort.png"></a>
+        <a href="#">Crazy</a>
+        <a href="#">Haru</a>
+        <a href="#">Gori</a>
+        <a href="#">Leo</a>
+        <a href="#">Effort</a>
+    </div>
 </body>
 </html>
