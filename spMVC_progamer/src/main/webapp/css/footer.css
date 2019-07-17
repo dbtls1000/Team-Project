@@ -1,0 +1,33 @@
+@charset "UTF-8";
+aside.img{
+    height: 520px;
+    width: 342px;
+    background-image: url("../Team-project/images/페이커.png");
+}
+
+div.advertisement{
+    display: flex;
+    margin: 10px auto;
+    width:1300px;
+    height: 300px;
+}
+div.advertisement img{
+    width: 50%;
+}
+footer{
+    position:absolute;
+    width: 100%;
+    margin-top: 30px;
+    background-color: lightblue;
+    color:darkblue;
+    text-align: right;
+    padding:0.5rem;
+    font-family: 'Jua', sans-serif;
+}
+aside.img {
+	display: inline-block;
+	height: 520px;
+	width: 342px;
+	justify-content: flex-end;
+	align-items: flex-start;
+}

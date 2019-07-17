@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="main">
+        
+        <aside>
+
+        </aside>
+        <div class="imgmenu">
+            <a href="#"><img src="${rootPath}/resources/images/SKTT1.png" alt="SKT T1"></a>
+            <a href="#"><img src="${rootPath}/resources/images/Griffin.png" alt="Griffin"></a>
+            <a href="#"><img src="${rootPath}/resources/images/KZ_Dragon-X.png" alt="KingZone Dragon-X"></a>
+            <a href="#"><img src="${rootPath}/resources/images/SANDBOX_Gaming.png" alt="SANDBOX Gaiming"></a>
+            <a href="#">SKT T1</a>
+            <a href="#">Griffin</a>
+            <a href="#">KZ Dragon-X</a>
+            <a href="#">SANDBOX Gaming</a>
+            <a href="#"><img src="${rootPath}/resources/images/HanHwa_Life_Esports.png" alt="HanHwa Life Esports"></a>
+            <a href="#"><img src="${rootPath}/resources/images/Gen.G_Esports.png" alt="Gen.G Esports"></a>
+            <a href="#"><img src="${rootPath}/resources/images/Jin_Air_Greenwings.png" alt="Jin Air Greenwings"></a>
+            <a href="#"><img src="${rootPath}/resources/images/Afreeca_Freecs.png" alt="Afreeca Freecs"></a>
+            <a href="#">HanHwa Life Esports</a>
+            <a href="#">Gen.G Esports</a>
+            <a href="#">Jin Air Greenwings</a>
+            <a href="#">Afreeca Freecs</a>
+            <a href="#" id="item1"><img src="${rootPath}/resources/images/DAMWON_Gaming.png" alt="DAMWON Gaiming"></a>
+            <a href="#" id="item2"><img src="${rootPath}/resources/images/KT_Rolster.png" alt="KT Rolster"></a>
+            <a href="#" id="item3">DAMWON Gaming</a>
+            <a href="#" id="item4">KT Rolster</a>
+        </div>
+        <aside class="img">
+
+        </aside>
+    </div>

@@ -1,4 +1,4 @@
-package com.biz.progamer;
+package com.biz.progamer.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

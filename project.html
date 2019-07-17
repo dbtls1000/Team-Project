@@ -6,131 +6,22 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='header.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='footer.css'>
     <script src='main.js'></script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
-        *{
-            box-sizing: border-box;
-        }
-        head,div,nav,footer{
-            margin: 0;
-            padding: 0;
-        }
-        header{
-            display: flex;
-            background-image: url("../Team-project/header.jpg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            font-family: 'Jua', sans-serif;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-        header ul{
-            display: flex;
-        }
-        header ul li{
-            display: block;
-            list-style: none;
-            text-align: right;
-            margin: 0;
-        }
-        header ul li a{
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        header img{
-            height: 60px;
-        }
-        header h2{
-            display: block;
-            color : darkblue;
-            font-size: 50px;
-        }
-        nav.search{
-            display: flex;
-            background-color: aquamarine;
-            margin: 0 0 10px 0;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Jua', sans-serif;
-        }
-       
-        nav.search ul{
-            display: flex;
-        }
-        nav.search ul li{
-            display: block;
-            list-style: none;
-            color: darkblue;
-            font-size: 20px;
-        }
-        nav.search ul li a {
-            list-style: none;
-            text-decoration: none;
-            margin: 0 10px;
-            color: inherit;
-        }
-        div.search-box{
-            display: block;
-        }
-        div.search-box button{
-            border: 0;
-            background: orchid;
-            margin: 0;
-            border: 1px solid purple;
-            padding: 1px 6px;
-            outline: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: white;
-        }
-        div.main{
-            display: flex;
-        }
-        div.main aside{
-            display: block;
-            min-width: 200px;
-        }
-        nav.listmenu{
-            display: block;
-            margin: 0;
-            padding: 5px;
-            border: 2px solid purple;
-            border-radius: 20px;
-            min-width: 230px;
-            text-align: left;
-            font-family: 'Jua', sans-serif;
-        }
-        nav.listmenu p{
-            font-size: 20px;
-            text-align: center;
-        }
-        nav.listmenu ul li {
-            list-style: none;
-            display: block;
-            margin:13px;
-            color: darkblue;
-        }
-        nav.listmenu ul li a{
-            text-decoration: none;
-            color: inherit;
-        }
-        nav.listmenu ul li a:hover{
-            background-color: aqua;
-            cursor: pointer;
-        }
-        div.imgmenu {
-            display: grid;
-            grid-template-columns: repeat(4,200px);
-            grid-template-rows: 120px 50px 120px 50px 120px 50px;
-        }
+        /* include-header.css */
+        
+        /**/
         aside{
             height: 520px;
             margin: 0 3px;
         }
-        aside.img{
-            width: 342px;
-            background-image: url("../Team-project/images/페이커.png");
+        
+        div.imgmenu {
+            display: grid;
+            grid-template-columns: repeat(4,200px);
+            grid-template-rows: 120px 50px 120px 50px 120px 50px;
         }
         div.imgmenu {
             font-family: 'Jua', sans-serif;
@@ -158,24 +49,12 @@
             grid-column-start: 3;
             grid-column-end: 5;
         }
-        div.advertisement{
+        /* footer */
+        aside.img{
             display: flex;
-            margin: 10px auto;
-            width:1300px;
-            height: 300px;
-        }
-        div.advertisement img{
-            width: 50%;
-        }
-        footer{
-            position:absolute;
-            width: 100%;
-            margin-top: 30px;
-            background-color: lightblue;
-            color:darkblue;
-            text-align: right;
-            padding:0.5rem;
-            font-family: 'Jua', sans-serif;
+            justify-content: flex-end;
+            height: 520px;
+            width: 342px;
         }
     </style>
 </head>
@@ -202,24 +81,30 @@
         <button>검색</button>
         </div>
     </nav>
-    <div class="main">
-        <nav class="listmenu">
-            <p>팀목록</p>
-            <ul>
-                <li><a href="#">SKT T1</a></li>
-                <li><a href="#">Griffin</a></li>
-                <li><a href="#">KZ Dragon-X</a></li>
-                <li><a href="#">SANDBOX Gaming</a></li>
-                <li><a href="#">DAMWON Gaming</a></li>
-                <li><a href="#">HanHwa Life Esports</a></li>
-                <li><a href="#">Gen.G Esports</a></li>
-                <li><a href="#">Jin Air Greenwings</a></li>
-                <li><a href="#">Afreeca Freecs</a></li>
-                <li><a href="#">KT Rolster</a></li>
-            </ul>
-        </nav>
-        <aside>
+    <nav class="listmenu">
+        <p>팀목록</p>
+        <ul>
+            <li><a href="#">SKT T1</a></li>
+            <li><a href="#">Griffin</a></li>
+            <li><a href="#">KZ Dragon-X</a></li>
+            <li><a href="#">SANDBOX Gaming</a></li>
+            <li><a href="#">DAMWON Gaming</a></li>
+            <li><a href="#">HanHwa Life Esports</a></li>
+            <li><a href="#">Gen.G Esports</a></li>
+            <li><a href="#">Jin Air Greenwings</a></li>
+            <li><a href="#">Afreeca Freecs</a></li>
+            <li><a href="#">KT Rolster</a></li>
+        </ul>
+    </nav>
 
+
+    <aside class="img">
+        <img src="../Team-Project/images/페이커.png" alt="">
+    </aside>
+
+
+    <div class="main">
+        <aside>
         </aside>
         <div class="imgmenu">
             <a href="#"><img src="../Team-Project/images/SKT T1.png" alt="SKT T1"></a>
@@ -243,10 +128,11 @@
             <a href="#" id="item3">DAMWON Gaming</a>
             <a href="#" id="item4">KT Rolster</a>
         </div>
-        <aside class="img">
-
-        </aside>
     </div>
+
+
+
+
     <div class="advertisement">
         <img src="../Team-Project/images/ad.gif" alt="">
         <img src="../Team-Project/images/ad2.gif" alt="">
