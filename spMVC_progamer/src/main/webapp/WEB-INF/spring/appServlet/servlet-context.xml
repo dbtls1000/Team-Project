@@ -22,7 +22,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.biz.progamer" />
+	<context:component-scan base-package="com.biz.progamer.controller" />
+	<context:component-scan base-package="com.biz.progamer.service" />
 	
 	
 	

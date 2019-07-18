@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<table class="bz-table" border="1">
+	<tr>
+		<th colspan="5">HeadCoach</th>
+	</tr>
+	<tr>
+		<td colspan="5"><a href="#"><img
+				src="${rootPath}/resources/images/김정균.png"></a></td>
+	</tr>
+	<tr>
+		<td colspan="5"><a href="#">김정균</a></td>
+	</tr>
+	<tr>
+		<th colspan="2">Coach</th>
+		<th colspan="3">Coach</th>
+	</tr>
+	<tr>
+		<td colspan="2"><a href="#"><img
+				src="${rootPath}/resources/images/김상철.png"></a></td>
+		<td colspan="3"><a href="#"><img
+				src="${rootPath}/resources/images/이재민.png"></a></td>
+	</tr>
+	<tr>
+		<td colspan="2"><a href="#">김상철</a></td>
+		<td colspan="3"><a href="#">이재민</a></td>
+	</tr>
+	<tr>
+		<th>TOP</th>
+		<th>JG</th>
+		<th>MID</th>
+		<th>BOT</th>
+		<th>SPT</th>
+	</tr>
+	<tr>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Khan.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Clid.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Faker.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Teddy.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Mata.png" alt=""></a></td>
+	</tr>
+	<tr>
+		<td><a href="#">Khan</a></td>
+		<td><a href="#">Clid</a></td>
+		<td><a href="#">Faker</a></td>
+		<td><a href="#">Teddy</a></td>
+		<td><a href="#">Mata</a></td>
+	</tr>
+	<tr>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Crazy.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Haru.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Gori.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Leo.png" alt=""></a></td>
+		<td><a href="#"><img
+				src="${rootPath}/resources/images/Effort.png" alt=""></a></td>
+	</tr>
+	<tr>
+		<td><a href="#">Crazy</a></td>
+		<td><a href="#">Haru</a></td>
+		<td><a href="#">Gori</a></td>
+		<td><a href="#">Leo</a></td>
+		<td><a href="#">Effort</a></td>
+	</tr>
+</table>

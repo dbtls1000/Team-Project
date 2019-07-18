@@ -1,0 +1,20 @@
+@charset "UTF-8";
+table.bz-table{
+	text-align: center;
+	width:60%;
+	margin:0 auto;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+table.bz-table th{
+	color:blue;
+	font-size: 30px;
+	font-weight: bold;
+}
+table.bz-table td{
+	color:darkblue;
+	font-size:15px;
+}
+table.bz-table img{
+	height: 120px;
+}

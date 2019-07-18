@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <header>
-	<a href="#"><img src="../Team-Project/images/logo.png" alt="PG.SC"></a>
+	<a href="${rootPath}/"><img src="${rootPath}/resources/images/logo.png" alt="PG.SC"></a>
 	<h2>Progamer Search</h2>
 	<ul>
-		<li><a href="#">회원가입</a></li>
-		<li><a href="#">로그인</a></li>
+		<li><a href="${rootPath}/join">회원가입</a></li>
+		<li><a href="${rootPath}/login">로그인</a></li>
 	</ul>
 </header>
 <nav class="search">
 	<ul>
-		<li><a href="#">Home</a></li>
+		<li><a href="${rootPath}/">Home</a></li>
 		<li><a href="#">새소식</a></li>
 		<li><a href="#">리그 일정</a></li>
 		<li><a href="#">리그 순위</a></li>
@@ -22,20 +22,6 @@
 		<button>검색</button>
 	</div>
 </nav>
-<nav class="listmenu">
-	<p>팀목록</p>
-	<ul>
-		<li><a href="#">SKT T1</a></li>
-		<li><a href="#">Griffin</a></li>
-		<li><a href="#">KZ Dragon-X</a></li>
-		<li><a href="#">SANDBOX Gaming</a></li>
-		<li><a href="#">DAMWON Gaming</a></li>
-		<li><a href="#">HanHwa Life Esports</a></li>
-		<li><a href="#">Gen.G Esports</a></li>
-		<li><a href="#">Jin Air Greenwings</a></li>
-		<li><a href="#">Afreeca Freecs</a></li>
-		<li><a href="#">KT Rolster</a></li>
-	</ul>
-</nav>
+
 
 
