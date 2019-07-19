@@ -13,4 +13,5 @@ public class GamerController {
 		model.addAttribute("BODY","SKT_T1");
 		return "home";
 	}
+	
 }

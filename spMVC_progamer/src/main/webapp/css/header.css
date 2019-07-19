@@ -1,101 +1,111 @@
-@charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
-
-* {
-	box-sizing: border-box;
-}
-
-head, div, nav, footer {
-	margin: 0;
-	padding: 0;
-}
-
-header {
-	display: flex;
-	background-image: linear-gradient(lightblue, lightgreen, aquamarine);
-	font-family: 'Jua', sans-serif;
-	align-items: flex-start;
-	justify-content: space-between;
-}
-
-header ul {
-	display: flex;
-}
-
-header ul li {
-	display: block;
-	list-style: none;
-	text-align: right;
-	margin: 0;
-}
-
-header ul li a {
-	margin: 0 10px;
-	text-decoration: none;
-}
-
-header img {
-	height: 60px;
-}
-
-header h2 {
-	display: block;
-	color: darkblue;
-	font-size: 50px;
-}
-
-nav.search {
-	display: flex;
-	background-color: aquamarine;
-	margin: 0 0 10px 0;
-	justify-content: space-between;
-	align-items: center;
-	font-family: 'Jua', sans-serif;
-}
-
-nav.search ul {
-	display: flex;
-}
-
-nav.search ul li {
-	display: block;
-	list-style: none;
-	color: darkblue;
-	font-size: 20px;
-}
-
-nav.search ul li a {
-	list-style: none;
-	text-decoration: none;
-	margin: 0 10px;
-	color: inherit;
-}
-
-div.search-box {
-	display: block;
-}
-
-div.search-box button {
-	border: 0;
-	background: orchid;
-	margin: 0;
-	border: 1px solid purple;
-	padding: 1px 6px;
-	outline: none;
-	border-radius: 5px;
-	cursor: pointer;
-	color: white;
-}
-
-div.main {
-	display: flex;
-}
-
-div.main aside {
-	display: block;
-	min-width: 200px;
-}
-
-
-
+        *{
+            box-sizing: border-box;
+        }
+        head,div,nav,footer{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: flex;
+            background-image: linear-gradient(lightblue,lightgreen,aquamarine);
+            font-family: 'Jua', sans-serif;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        header ul{
+            display: flex;
+        }
+        header ul li{
+            display: block;
+            list-style: none;
+            text-align: right;
+            margin: 0;
+        }
+        header ul li a{
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        header img{
+            height: 60px;
+        }
+        header h2{
+            display: block;
+            color : darkblue;
+            font-size: 50px;
+        }
+        nav.search{
+            display: flex;
+            background-color: aquamarine;
+            margin: 0 0 10px 0;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Jua', sans-serif;
+        }
+       
+        nav.search ul{
+            display: flex;
+        }
+        nav.search ul li{
+            display: block;
+            list-style: none;
+            color: darkblue;
+            font-size: 20px;
+        }
+        nav.search ul li a {
+            list-style: none;
+            text-decoration: none;
+            margin: 0 10px;
+            color: inherit;
+        }
+        div.search-box{
+            display: block;
+        }
+        div.search-box button{
+            border: 0;
+            background: orchid;
+            margin: 0;
+            border: 1px solid purple;
+            padding: 1px 6px;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        div.main{
+            display: flex;
+        }
+        div.main aside{
+            display: block;
+            min-width: 200px;
+        }
+        nav.listmenu{
+            float: left;
+            display: block;
+            margin: 0;
+            padding: 5px;
+            border: 2px solid purple;
+            border-radius: 20px;
+            min-width: 230px;
+            text-align: left;
+            font-family: 'Jua', sans-serif;
+        }
+        nav.listmenu p{
+            font-size: 20px;
+            text-align: center;
+        }
+        nav.listmenu ul li {
+            list-style: none;
+            display: block;
+            margin:13px;
+            color: darkblue;
+        }
+        nav.listmenu ul li a{
+            text-decoration: none;
+            color: inherit;
+        }
+        nav.listmenu ul li a:hover{
+            background-color: aqua;
+            cursor: pointer;
+        }
+       
