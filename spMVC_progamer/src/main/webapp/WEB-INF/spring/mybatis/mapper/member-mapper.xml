@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biz.progamer.dao.MemberDao">
+	<select id="selectAll" resultType="MemberVO">
+		SELECT * FROM tbl_member
+	</select>
+	
+	<select id="findByUserId">
+		SELECT * FROM tbl_member WHERE m_userid = #{m_userid}
+	</select>
+	
+	<insert id="insert" parameterType="MemberVO">
+		<selectKey keyProperty="mo_seq" resultType="Long"
+			order="BEFORE">
+			SELECT ROUND(DBMS_RANDOM.VALUE(0,99999999999),0) FROM DUAL
+		</selectKey>
+		INSERT INTO tbl_member(
+			M_USERID,
+			M_PASSWORD,
+			M_REPASSWORD,
+			M_NAME,
+			M_NICK,
+			M_EMAIL,
+			M_TEL,
+			M_ROLE
+		) values(
+			#{m_userid},
+			#{m_password},
+			#{m_repassword},
+			#{m_name},
+			#{m_nick},
+			#{m_email},
+			#{m_tel},
+			#{m_role}
+		)
+	</insert>
+	
+	<update id="update" parameterType="MemberVO">
+		UPDATE tbl_member SET 
+		M_PASSWORD = #{m_password},
+		M_REPASSWORD = #{m_repassword},
+		M_NAME = #{m_name},
+		M_NICK = #{m_nick},
+		M_EMAIL = #{m_email},
+		M_TEL = #{m_tel},
+		M_ROLE = #{m_role}
+		WHERE M_USERID = #{m_userid}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM tbl_member WHERE m_userid = #{m_userid}
+	</delete>
+</mapper>

@@ -26,6 +26,9 @@
             margin: 0 10px;
             text-decoration: none;
         }
+        header ul li a:hover{
+            color:indigo;
+        }
         header img{
             height: 60px;
         }

@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<aside class="img">
-	<img src="${rootPath}/resources/images/페이커.png" alt="">
-</aside>
-</div>
 
 
 
