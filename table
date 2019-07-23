@@ -1,30 +1,83 @@
-<table class="imgmenu">
+<div class="main">
+        <nav class="listmenu">
+            <p>팀목록</p>
+            <ul>
+                <li><a href="#">SKT T1</a></li>
+                <li><a href="#">Griffin</a></li>
+                <li><a href="#">KZ Dragon-X</a></li>
+                <li><a href="#">SANDBOX Gaming</a></li>
+                <li><a href="#">DAMWON Gaming</a></li>
+                <li><a href="#">HanHwa Life Esports</a></li>
+                <li><a href="#">Gen.G Esports</a></li>
+                <li><a href="#">Jin Air Greenwings</a></li>
+                <li><a href="#">Afreeca Freecs</a></li>
+                <li><a href="#">KT Rolster</a></li>
+            </ul>
+        </nav>
+        <aside>
+
+        </aside>
+        <table>
             <tr>
-                <td><a href="#"><img src="../Team-Project/images/SKT T1.png" alt="SKT T1"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Griffin.png" alt="Griffin"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/KZ Dragon-X.png" alt="KingZone Dragon-X"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/SANDBOX Gaming.png" alt="SANDBOX Gaiming"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/DAMWON Gaming.png" alt="DAMWON Gaiming"></a></td>
+                <th colspan="5">HeadCoach</th>
             </tr>
             <tr>
-                <td><a href="#"><p>SKT T1</p></td></a>
-                <td><a href="#"><p>Griffin</p></td></a>
-                <td><a href="#"><p>KZ Dragon-X</p></td></a>
-                <td><a href="#"><p>SANDBOX Gaming</p></td></a>
-                <td><a href="#"><p>DAMWON Gaming</p></td></a>
+                <td colspan="5"><a href="#"><img src="../Team-Project/images/.png"></a></td>
             </tr>
             <tr>
-                <td><a href="#"><img src="../Team-Project/images/HanHwa Life Esports.png" alt="HanHwa Life Esports"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Gen.G Esports.png" alt="Gen.G Esports"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Jin Air Greenwings.png" alt="Jin Air Greenwings"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/Afreeca Freecs.png" alt="Afreeca Freecs"></a></td>
-                <td><a href="#"><img src="../Team-Project/images/KT Rolster.png" alt="KT Rolster"></a></td>
+                <td colspan="5"><a href="#"></a></td>
             </tr>
             <tr>
-                <td><a href="#"><p>HanHwa Life Esports</p></td></a>
-                <td><a href="#"><p>Gen.G Esports</p></td></a>
-                <td><a href="#"><p>Jin Air Greenwings</p></td></a>
-                <td><a href="#"><p>Afreeca Freecs</p></td></a>
-                <td><a href="#"><p>KT Rolster</p></td></a>
+                <th colspan="5">Coach</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><a href="#"></a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>TOP</th>
+                <th>JG</th>
+                <th>MID</th>
+                <th>BOT</th>
+                <th>SPT</th>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#"></a></td>
+                <td><a href="#"></a></td>
+                <td><a href="#"></a></td>
+                <td><a href="#"></a></td>
+                <td><a href="#"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="#"><img src="../Team-Project/images/.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#"></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="#"></a></td>
             </tr>
         </table>
+    </div>
