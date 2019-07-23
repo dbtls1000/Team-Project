@@ -1,16 +1,50 @@
 @charset "UTF-8";
 
-aside {
-	max-width :50px;
-	margin: 0 3px;
-}
-body,div,nav,ul{
+body, div, table, nav, ul {
 	padding: 0;
-	margin:0;
 }
+
+div.main {
+	display: flex;
+}
+
+table {
+	width: 50%;
+	height: auto;
+	font-family: 'Jua', sans-serif;
+}
+
+table tr {
+	text-align: center;
+}
+
+table th {
+	font-size: 20px;
+	color: salmon;
+}
+
+table td {
+	font-size: 16px;
+	color: grey;
+}
+
+table td a {
+	text-decoration: none;
+	color: inherit;
+}
+
+div.main {
+	display: flex;
+}
+
+div.main aside {
+	display: block;
+	min-width: 200px;
+}
+
 nav.listmenu {
 	float: left;
-	display: inline-block;
+	display: block;
 	margin: 0;
 	padding: 5px;
 	border: 2px solid purple;
@@ -21,7 +55,7 @@ nav.listmenu {
 }
 
 nav.listmenu p {
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -41,28 +75,6 @@ nav.listmenu ul li a:hover {
 	background-color: aqua;
 	cursor: pointer;
 }
-
-
-table {
-	color: darkblue;
-	text-align: center;
-	padding:1rem;
-	align-items: center;
-	justify-content:center;
-	margin-right: 100px;
-}
-
-table td {
-	min-width: 200px;
-}
-
-table td a {
-	text-decoration: none;
-	font-family: 'Jua', sans-serif;
-	color: darkblue;
-}
-
-/* footer */
 aside.img {
 	display: flex;
 	justify-content: flex-end;

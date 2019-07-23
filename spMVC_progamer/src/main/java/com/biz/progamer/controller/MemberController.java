@@ -8,13 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.biz.progamer.model.MemberVO;
 import com.biz.progamer.service.MemberService;
 
 @Controller
+@RequestMapping(value="/member")
 public class MemberController {
 	
 	@Autowired
@@ -28,6 +32,7 @@ public class MemberController {
 	@RequestMapping(value="login",method=RequestMethod.POST)
 	public String login(@ModelAttribute MemberVO memberVO, Model model,
 			HttpSession httpSession) {
+		memberVO = mService.login(memberVO);
 		if(memberVO != null) httpSession.setAttribute("USER", memberVO);
 		return "redirect:/";
 	}
@@ -39,10 +44,7 @@ public class MemberController {
 	}
 	@RequestMapping(value="join",method=RequestMethod.POST)
 	public String join(@ModelAttribute MemberVO memberVO, Model model) {
-		
 		mService.insert(memberVO);
-		if(memberVO.getM_password() != memberVO.getM_repassword()) return "join";
-		
 		model.addAttribute("MEMBER",memberVO);
 		model.addAttribute("BODY","MEMBER-VIEW");
 		return "home";
@@ -52,6 +54,11 @@ public class MemberController {
 	public String logout(HttpSession httpSession) {
 		httpSession.setAttribute("ADMIN", null);
 		httpSession.setAttribute("USER", null);
-		return "home";
+		return "redirect:/";
+	}
+	@ResponseBody
+	@RequestMapping(value="/check_id",method=RequestMethod.GET)
+	public String check_id(@RequestParam String m_userid, Model model) {
+		return mService.check_id(m_userid);
 	}
 }
