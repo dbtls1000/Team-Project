@@ -6,21 +6,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.biz.progamer.dao.MemberDao;
+import com.biz.progamer.mapper.MemberDao;
 import com.biz.progamer.model.MemberVO;
 
 @Service
 public class MemberService {
 	
+	@Autowired
 	MemberDao mDao;
-	
-	@Autowired
-	SqlSession sqlSession;
-	
-	@Autowired
-	public void getSqlSession() {
-		mDao = sqlSession.getMapper(MemberDao.class);
-	}
 	
 	public List<MemberVO> selectAll() {
 		// TODO Auto-generated method stub

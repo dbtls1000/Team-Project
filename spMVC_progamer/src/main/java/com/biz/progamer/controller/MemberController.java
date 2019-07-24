@@ -24,12 +24,12 @@ public class MemberController {
 	@Autowired
 	MemberService mService;
 	// 로그인부분
-	@RequestMapping(value="login",method=RequestMethod.GET)
+	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(Model model) {
 		model.addAttribute("BODY","LOGIN");
-		return "home";
+		return "body/login";
 	}
-	@RequestMapping(value="login",method=RequestMethod.POST)
+	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(@ModelAttribute MemberVO memberVO, Model model,
 			HttpSession httpSession) {
 		memberVO = mService.login(memberVO);
@@ -37,20 +37,20 @@ public class MemberController {
 		return "redirect:/";
 	}
 	// 회원가입부분
-	@RequestMapping(value="join",method=RequestMethod.GET)
+	@RequestMapping(value="/join",method=RequestMethod.GET)
 	public String join(Model model) {
 		model.addAttribute("BODY","JOIN");
-		return "home";
+		return "/body/join";
 	}
-	@RequestMapping(value="join",method=RequestMethod.POST)
+	@RequestMapping(value="/join",method=RequestMethod.POST)
 	public String join(@ModelAttribute MemberVO memberVO, Model model) {
-		mService.insert(memberVO);
+		int ret =mService.insert(memberVO);
 		model.addAttribute("MEMBER",memberVO);
 		model.addAttribute("BODY","MEMBER-VIEW");
-		return "home";
+		return "redirect:/";
 	}
 	// 로그아웃부분
-	@RequestMapping(value="logout",method=RequestMethod.GET)
+	@RequestMapping(value="/logout",method=RequestMethod.GET)
 	public String logout(HttpSession httpSession) {
 		httpSession.setAttribute("ADMIN", null);
 		httpSession.setAttribute("USER", null);

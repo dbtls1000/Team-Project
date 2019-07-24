@@ -16,6 +16,7 @@
 			<li><a href="#">KT Rolster</a></li>
 		</ul>
 	</nav>
+	<aside></aside>
 	<table class="imgmenu">
 		<tr>
 			<td><a href="${rootPath}/sktt1"><img

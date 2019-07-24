@@ -16,10 +16,12 @@
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
-		<property name="configLocation" value="/WEB-INF/spring/mybatis/mybatis-config.xml"/>
-		<property name="mapperLocations" value="/WEB-INF/spring/mybatis/mapper/*-mapper.xml"/>
 	</bean>
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	<!-- spring의 transaction manager를 사용하여 transaction 자동화 -->
+	<tx:annotation-driven/>
+	<bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
 	</bean>
+	
+	<mybatis-spring:scan base-package="com.biz.progamer.mapper"/>
 </beans>

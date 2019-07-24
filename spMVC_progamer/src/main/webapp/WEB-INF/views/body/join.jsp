@@ -9,58 +9,41 @@
 		font-size:10px;
 	}
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-	$("#check_id").click(function(){
-		let m_userid = $(this).val()
-		$.ajax({
-			url:"${rootPath}/member/check_id?m_userid=" + m_userid,
-			method : "GET"
-		})
-		.done(function(result){
-			if(result == m_userid){
-				let msg = "이미 가입된 ID입니다"
-				alert(msg)
-			}
-		})
-		alert(msg)
-	})
-</script>
+
 <body>
 	<form method="POST">
 		<fieldset class="info">
 			<legend>회원가입 : </legend>
 			<div class="div1">
-				<label for="m_userid">ID</label> <input class="id" type="text"
+				<label for="m_userid">ID</label> <input type="text"
 					name="m_userid" id="m_userid" placeholder="사용자ID를 입력하세요">
 				
 			</div>
-			<button type="button" id="check_id">중복검사</button>
 			<div class="div1">
-				<label for="m_password">비밀번호 : </label> <input class="pw"
+				<label for="m_password">비밀번호 : </label> <input 
 					type="password" name="m_password" id="m_password"
 					placeholder="비밀번호를 입력하세요">
 			</div>
 			<div class="div1">
-				<label for="m_repassword">비밀번호 확인 : </label> <input class="pw"
+				<label for="m_repassword">비밀번호 확인 : </label> <input 
 					type="password" name="m_repassword" id="m_repassword"
 					placeholder="비밀번호를 한번더 입력하세요">
 			</div>
 			<span id="check"></span>
 			<div class="div1">
-				<label for="m_name">이름 : </label> <input class="em" type="text"
+				<label for="m_name">이름 : </label> <input type="text"
 					name="m_name" id="m_name" placeholder="이름을 입력해주세요">
 			</div>
 			<div class="div1">
-				<label for="m_nick">닉네임 : </label> <input class="em" type="text"
+				<label for="m_nick">닉네임 : </label> <input type="text"
 					name="m_nick" id="m_nick" placeholder="닉네임을 입력해주세요">
 			</div>
 			<div class="div1">
-				<label for="m_email">이메일 : </label> <input class="em" type="text"
+				<label for="m_email">이메일 : </label> <input type="text"
 					name="m_email" id="m_email" placeholder="e-mail을 입력해주세요">
 			</div>
 			<div class="div1">
-				<label for="m_tel">전화번호 : </label> <input class="ph" type="text"
+				<label for="m_tel">전화번호 : </label> <input type="text"
 					name="m_tel" id="m_tel" placeholder="전화번호를 입력해주세요">
 			</div>
 			<button>회원가입</button>
