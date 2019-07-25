@@ -7,6 +7,7 @@
     		<th>NO.</th>
     		<th>이름</th>
     		<th>ID</th>
+    		<th>소속팀</th>
     		<th>생년월일</th>
     		<th>포지션</th>
     	</tr>
@@ -22,6 +23,7 @@
     					<td>${s.count}</td>
     					<td>${pgVO.pg_gamer}</td>
     					<td>${pgVO.pg_id}</td>
+    					<td>${pgVO.pg_team}</td>
     					<td>${pgVO.pg_birth}</td>
     					<td>${pgVO.pg_position}</td>
     				</tr>

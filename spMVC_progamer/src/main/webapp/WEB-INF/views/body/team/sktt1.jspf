@@ -4,18 +4,19 @@
 	<nav class="listmenu">
 		<p>팀목록</p>
 		<ul>
-			<li><a href="${rootPath}/">SKT T1</a></li>
-			<li><a href="#">Griffin</a></li>
-			<li><a href="#">KZ Dragon-X</a></li>
-			<li><a href="#">SANDBOX Gaming</a></li>
-			<li><a href="#">DAMWON Gaming</a></li>
-			<li><a href="#">HanHwa Life Esports</a></li>
-			<li><a href="#">Gen.G Esports</a></li>
-			<li><a href="#">Jin Air Greenwings</a></li>
-			<li><a href="#">Afreeca Freecs</a></li>
-			<li><a href="#">KT Rolster</a></li>
+			<li><a href="${rootPath}/gamer/sktt1">SKT T1</a></li>
+			<li><a href="${rootPath}/gamer/griffin">Griffin</a></li>
+			<li><a href="${rootPath}/gamer/kz">KZ Dragon-X</a></li>
+			<li><a href="${rootPath}/gamer/sandbox">SANDBOX Gaming</a></li>
+			<li><a href="${rootPath}/gamer/damwon">DAMWON Gaming</a></li>
+			<li><a href="${rootPath}/gamer/hanhwa">HanHwa Life Esports</a></li>
+			<li><a href="${rootPath}/gamer/geng">Gen.G Esports</a></li>
+			<li><a href="${rootPath}/gamer/jinair">Jin Air Greenwings</a></li>
+			<li><a href="${rootPath}/gamer/afreeca">Afreeca Freecs</a></li>
+			<li><a href="${rootPath}/gamer/kt">KT Rolster</a></li>
 		</ul>
 	</nav>
+	<aside></aside>
 	<table class="bz-table">
 		<tr>
 			<th colspan="5">HeadCoach</th>
@@ -87,7 +88,5 @@
 			<td><a href="#">Effort</a></td>
 		</tr>
 	</table>
-	<aside class="img">
-		<img src="${rootPath}/resources/images/페이커.png" alt="">
-	</aside>
+
 </div>

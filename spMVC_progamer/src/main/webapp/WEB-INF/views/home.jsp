@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <!-- css파일 모아놓는곳 -->
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/header.css?ver=2019072302">
+	href="${rootPath}/css/header.css?ver=2019072501">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/footer.css?ver=20190723">
 <link rel="stylesheet" type="text/css"
@@ -27,21 +27,35 @@
 <body>
 	<%@ include file="/WEB-INF/views/include/include-header.jspf"%>
 	<c:choose>
-		<c:when test="${BODY == 'LOGIN'}">
-			<%@ include file="/WEB-INF/views/body/login.jsp"%>
-		</c:when>
-		<c:when test="${BODY == 'JOIN'}">
-			<%@ include file="/WEB-INF/views/body/join.jsp"%>
-		</c:when>
-		<c:when test="${BODY == 'MEMBER-VIEW'}">
-			<p>ID : ${MEMBER.m_userid }</p>
-			<p>PASSWORD : ${MEMBER.m_password }</p>
-			<p>NAME : ${MEMBER.m_name }</p>
-			<p>EMAIL : ${MEMBER.m_email }</p>
-			<p>TEL : ${MEMBER.m_tel }</p>
-		</c:when>
 		<c:when test="${BODY == 'SKT_T1'}">
-			<%@ include file="/WEB-INF/views/body/SKT_T1.jspf"%>
+			<%@ include file="/WEB-INF/views/body/team/sktt1.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'GRIFFIN'}">
+			<%@ include file="/WEB-INF/views/body/team/griffin.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'KZ'}">
+			<%@ include file="/WEB-INF/views/body/team/kz.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'DAMWON'}">
+			<%@ include file="/WEB-INF/views/body/team/damwon.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'SANDBOX'}">
+			<%@ include file="/WEB-INF/views/body/team/sandbox.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'HANHWA'}">
+			<%@ include file="/WEB-INF/views/body/team/hanhwa.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'GENG'}">
+			<%@ include file="/WEB-INF/views/body/team/geng.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'AFREECA'}">
+			<%@ include file="/WEB-INF/views/body/team/afreeca.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'KT'}">
+			<%@ include file="/WEB-INF/views/body/team/kt.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'JINAIR'}">
+			<%@ include file="/WEB-INF/views/body/team/jinair.jspf"%>
 		</c:when>
 		<c:when test="${BODY == 'GAMER_VIEW'}">
 			<%@ include file="/WEB-INF/views/body/glist.jspf"%>

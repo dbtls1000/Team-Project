@@ -1,0 +1,109 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="main">
+	<nav class="listmenu">
+		<p>팀목록</p>
+		<ul>
+			<li><a href="${rootPath}/gamer/sktt1">SKT T1</a></li>
+			<li><a href="${rootPath}/gamer/griffin">Griffin</a></li>
+			<li><a href="${rootPath}/gamer/kz">KZ Dragon-X</a></li>
+			<li><a href="${rootPath}/gamer/sandbox">SANDBOX Gaming</a></li>
+			<li><a href="${rootPath}/gamer/damwon">DAMWON Gaming</a></li>
+			<li><a href="${rootPath}/gamer/hanhwa">HanHwa Life Esports</a></li>
+			<li><a href="${rootPath}/gamer/geng">Gen.G Esports</a></li>
+			<li><a href="${rootPath}/gamer/jinair">Jin Air Greenwings</a></li>
+			<li><a href="${rootPath}/gamer/afreeca">Afreeca Freecs</a></li>
+			<li><a href="${rootPath}/gamer/kt">KT Rolster</a></li>
+		</ul>
+	</nav>
+	<aside></aside>
+	<table>
+		<tr>
+			<th colspan="5">HeadCoach</th>
+		</tr>
+		<tr>
+			<td colspan="5"><a href="#"><img
+					src="${rootPath}/resources/images/오창종.png"></a></td>
+		</tr>
+		<tr>
+			<td colspan="5"><a href="#">오창종</a></td>
+		</tr>
+		<tr>
+			<th colspan="5">Coach</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/정재승.png"></a></td>
+			<td></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/손승익.png"></a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="#">정제승</a></td>
+			<td></td>
+			<td><a href="#">손승익</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>TOP</th>
+			<th>JG</th>
+			<th>MID</th>
+			<th>BOT</th>
+			<th>SPT</th>
+		</tr>
+		<tr>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Smeb.png"></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Score.png"></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Bdd.png"></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Pray.png"></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Snowflower.png"></a></td>
+		</tr>
+		<tr>
+			<td><a href="#">송경호</a></td>
+			<td><a href="#">고동빈</a></td>
+			<td><a href="#">곽보성</a></td>
+			<td><a href="#">김종인</a></td>
+			<td><a href="#">노회종</a></td>
+		</tr>
+		<tr>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Kingen.png"></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Umti.png"></a></td>
+			<td></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Gango.png"></a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><a href="#">황성훈</a></td>
+			<td><a href="#">엄성현</a></td>
+			<td></td>
+			<td><a href="#">변세훈</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Zenit.png"></a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a href="#">전태권</a></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
