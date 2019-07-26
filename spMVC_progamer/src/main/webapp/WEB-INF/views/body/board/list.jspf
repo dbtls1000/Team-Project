@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<table>
+	<tr>
+		<th>NO</th>
+		<th>제목</th>
+		<th>작성자</th>
+		<th>작성일</th>
+		<th>조회수</th>
+	</tr>
+	<c:choose>
+		<c:when test="${empty BLIST}">
+			<tr>
+				<td colspan="5">데이터가 없습니다</td>			
+			</tr>
+		</c:when>
+		<c:otherwise>
+			<c:forEach items="${BLIST}" var="bVO" varStatus="s">
+				<tr>
+					<td>${s.count}</td>
+					<td>${bVO.b_title}</td>
+					<td>${bVO.b_auth}</td>
+					<td>${bVO.b_date}</td>
+					<td></td>
+				</tr>
+			</c:forEach>
+		</c:otherwise>
+	</c:choose>
+</table>
+<div>
+	<button>글쓰기</button>
+</div>

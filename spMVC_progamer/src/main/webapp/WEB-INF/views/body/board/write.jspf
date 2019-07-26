@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
+<form:form modelAttribute="boardVO" enctype="multipart/form-data">
+	<div>
+		<label for="b_date">작성일</label>
+		<form:input type="date" id="b_date" path="b_date"/>
+		<form:errors path="b_date"/>
+	</div>
+	<div>
+		<label for="b_time">작성시각</label>
+		<form:input type="text" id="b_time" path="b_time"/>
+		<form:errors path="b_time"/>
+	</div>
+	<div>
+		<label for="b_auth">작성자</label>
+		<form:input type="text" id="b_auth" path="b_auth"/>
+		<form:errors path="b_auth"/>
+	</div>
+	<div>
+		<label for="b_title">제목</label>
+		<form:input type="text" id="b_title" path="b_title"/>
+		<form:errors path="b_title"/>
+	</div>
+	<div>
+		<label for="b_content">내용</label>
+		<form:textarea rows="10" id="b_content" path="b_content"/>
+		<form:errors path="b_content"/>
+	</div>
+	<div>
+		<button>등록</button>
+		<button>취소</button>
+	</div>
+</form:form>
+    

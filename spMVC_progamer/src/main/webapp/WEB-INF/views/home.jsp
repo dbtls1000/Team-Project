@@ -60,6 +60,9 @@
 		<c:when test="${BODY == 'GAMER_VIEW'}">
 			<%@ include file="/WEB-INF/views/body/glist.jspf"%>
 		</c:when>
+		<c:when test="${BODY == 'BOARD_LIST'}">
+			<%@ include file="/WEB-INF/views/body/board/list.jspf"%>
+		</c:when>
 		<c:otherwise>
 			<%@ include file="/WEB-INF/views/body/main.jspf"%>
 		</c:otherwise>
