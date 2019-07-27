@@ -20,4 +20,10 @@ public class BoardService {
 		
 		return bList;
 	}
+
+	public int insert(BoardVO boardVO) {
+		// TODO Auto-generated method stub
+		int ret = bDao.insert(boardVO);
+		return ret;
+	}
 }
