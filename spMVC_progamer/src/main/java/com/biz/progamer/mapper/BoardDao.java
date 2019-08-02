@@ -16,4 +16,7 @@ public interface BoardDao {
 	@InsertProvider(value=BoardSQL.class,method="board_insert_sql")
 	public int insert(BoardVO boardVO);
 
+	@Select(" SELECT * FROM tbl_board WHERE b_seq = #{b_seq} ")
+	public BoardVO findBySeq(long b_seq);
+
 }

@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<script>
+	$(function(){
+		$("#b_row").click(function(){
+			let board-seq = $(this).attr("data-seq")
+			location.href="${rootPath}/board/view?b_seq=" + board-seq
+		})
+	})
+</script>
 <table>
 	<tr>
 		<th>NO</th>
@@ -17,7 +25,7 @@
 		</c:when>
 		<c:otherwise>
 			<c:forEach items="${BLIST}" var="bVO" varStatus="s">
-				<tr>
+				<tr id="b_row" data-seq="bVO.b_Seq">
 					<td>${s.count}</td>
 					<td>${bVO.b_title}</td>
 					<td>${bVO.b_auth}</td>

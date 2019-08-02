@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+  <table>
+        <tr>
+            <td colspan="3" rowspan="4"><img src=""></td>
+            <th>이름</th>
+            <td>${GAMER.pg_name}</td>
+            <th>ID</th>
+            <td>${GAMER.pg_nick}</td>
+        </tr>
+        <tr>
+            <th>생년월일</th>
+            <td colspan="3">${GAMER.pg_birth}</td>
+        </tr>
+        <tr>
+            <th>포지션</th>
+            <td colspan="3">${GAMER.pg_position}</td>
+        </tr>
+        <tr>
+            <th>현재 소속팀</th>
+            <td>${GAMER.pg_team}</td>
+            <th>이전 소속팀</th>
+            <td>${GAMER.pg_lastteam}</td>
+        </tr>
+        <tr>
+            <th colspan="7">우승경력</th>
+        </tr>
+        <tr>
+            <td colspan="7">${GAMER.pg_career}</td>
+        </tr>
+    </table>

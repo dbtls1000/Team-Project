@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+
+
+
+
+<div class="advertisement">
+	<img src="${rootPath}/resources/images/ad.gif" alt=""> <img
+		src="${rootPath}/resources/images/ad2.gif" alt="">
+</div>
+<footer>
+	<address>CopyRight &copy; duawowkd@naver.com</address>
+	<address>CopyRight &copy; whdtjr3973@naver.com</address>
+	<address>CopyRight &copy; dbsqhtjs@naver.com</address>
+</footer>

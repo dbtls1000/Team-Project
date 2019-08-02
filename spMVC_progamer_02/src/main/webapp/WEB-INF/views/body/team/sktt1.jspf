@@ -1,0 +1,92 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="main">
+	<nav class="listmenu">
+		<p>팀목록</p>
+		<ul>
+			<li><a href="${rootPath}/gamer/sktt1">SKT T1</a></li>
+			<li><a href="${rootPath}/gamer/griffin">Griffin</a></li>
+			<li><a href="${rootPath}/gamer/kz">KZ Dragon-X</a></li>
+			<li><a href="${rootPath}/gamer/sandbox">SANDBOX Gaming</a></li>
+			<li><a href="${rootPath}/gamer/damwon">DAMWON Gaming</a></li>
+			<li><a href="${rootPath}/gamer/hanhwa">HanHwa Life Esports</a></li>
+			<li><a href="${rootPath}/gamer/geng">Gen.G Esports</a></li>
+			<li><a href="${rootPath}/gamer/jinair">Jin Air Greenwings</a></li>
+			<li><a href="${rootPath}/gamer/afreeca">Afreeca Freecs</a></li>
+			<li><a href="${rootPath}/gamer/kt">KT Rolster</a></li>
+		</ul>
+	</nav>
+	<aside></aside>
+	<table class="bz-table">
+		<tr>
+			<th colspan="5">HeadCoach</th>
+		</tr>
+		<tr>
+			<td colspan="5"><a href="#"><img
+					src="${rootPath}/resources/images/김정균.png"></a></td>
+		</tr>
+		<tr>
+			<td colspan="5"><a href="#">김정균</a></td>
+		</tr>
+		<tr>
+			<th colspan="2">Coach</th>
+			<th colspan="3">Coach</th>
+		</tr>
+		<tr>
+			<td colspan="2"><a href="#"><img
+					src="${rootPath}/resources/images/김상철.png"></a></td>
+			<td colspan="3"><a href="#"><img
+					src="${rootPath}/resources/images/이재민.png"></a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><a href="#">김상철</a></td>
+			<td colspan="3"><a href="#">이재민</a></td>
+		</tr>
+		<tr>
+			<th>TOP</th>
+			<th>JG</th>
+			<th>MID</th>
+			<th>BOT</th>
+			<th>SPT</th>
+		</tr>
+		<tr>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Khan.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Clid.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Faker.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Teddy.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Mata.png" alt=""></a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Khan</a></td>
+			<td><a href="#">Clid</a></td>
+			<td><a href="#">Faker</a></td>
+			<td><a href="#">Teddy</a></td>
+			<td><a href="#">Mata</a></td>
+		</tr>
+		<tr>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Crazy.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Haru.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Gori.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Leo.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Effort.png" alt=""></a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Crazy</a></td>
+			<td><a href="#">Haru</a></td>
+			<td><a href="#">Gori</a></td>
+			<td><a href="#">Leo</a></td>
+			<td><a href="#">Effort</a></td>
+		</tr>
+	</table>
+
+</div>

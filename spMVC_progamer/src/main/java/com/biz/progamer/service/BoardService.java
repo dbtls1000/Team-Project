@@ -26,4 +26,10 @@ public class BoardService {
 		int ret = bDao.insert(boardVO);
 		return ret;
 	}
+
+	public BoardVO findBySeq(long b_seq) {
+		// TODO Auto-generated method stub
+		BoardVO boardVO = bDao.findBySeq(b_seq);
+		return boardVO;
+	}
 }

@@ -1,0 +1,96 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="main">
+	<nav class="listmenu">
+		<p>팀목록</p>
+		<ul>
+			<li><a href="${rootPath}/gamer/sktt1">SKT T1</a></li>
+			<li><a href="${rootPath}/gamer/griffin">Griffin</a></li>
+			<li><a href="${rootPath}/gamer/kz">KZ Dragon-X</a></li>
+			<li><a href="${rootPath}/gamer/sandbox">SANDBOX Gaming</a></li>
+			<li><a href="${rootPath}/gamer/damwon">DAMWON Gaming</a></li>
+			<li><a href="${rootPath}/gamer/hanhwa">HanHwa Life Esports</a></li>
+			<li><a href="${rootPath}/gamer/geng">Gen.G Esports</a></li>
+			<li><a href="${rootPath}/gamer/jinair">Jin Air Greenwings</a></li>
+			<li><a href="${rootPath}/gamer/afreeca">Afreeca Freecs</a></li>
+			<li><a href="${rootPath}/gamer/kt">KT Rolster</a></li>
+		</ul>
+	</nav>
+	<aside></aside>
+	<table>
+		<tr>
+			<th colspan="5">HeadCoach</th>
+		</tr>
+		<tr>
+			<td colspan="5"><a href="#"><img
+					src="${rootPath}/resources/images/김대호.png"></a></td>
+		</tr>
+		<tr>
+			<td colspan="5"><a href="#">김대호</a></td>
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+			<th>Coach</th>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/xbox.png"></a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td><a href="#">변영섭</a></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>TOP</th>
+			<th>JG</th>
+			<th>MID</th>
+			<th>BOT</th>
+			<th>SPT</th>
+		</tr>
+		<tr>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Sword.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Tarzan.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Chovy.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Viper.png" alt=""></a></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Lehends.png" alt=""></a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Sword</a></td>
+			<td><a href="#">Tarzan</a></td>
+			<td><a href="#">Chovy</a></td>
+			<td><a href="#">Viper</a></td>
+			<td><a href="#">Lehends</a></td>
+		</tr>
+		<tr>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/xbox.png"></a></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a href="#"><img
+					src="${rootPath}/resources/images/Kabble.png" alt=""></a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Doran</a></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a href="#">Kabble</a></td>
+		</tr>
+	</table>
+</div>
