@@ -89,7 +89,7 @@ public class GamerController {
 	}
 	
 	@RequestMapping(value="/team",method=RequestMethod.GET)
-	public String team(@RequestParam("team") String pg_team,Model model) {
+	public String team(@RequestParam String pg_team,Model model) {
 		
 		List<ProgamerVO> pgList = pgService.findByTeam(pg_team);
 		

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.biz.progamer.mapper.BoardDao;
+import com.biz.progamer.model.BoardDto;
 import com.biz.progamer.model.BoardVO;
 import com.biz.progamer.model.FileVO;
 
@@ -19,9 +20,14 @@ public class BoardService {
 	@Autowired
 	FileService fService;
 	
+	
 	public List<BoardVO> selectAll() {
 		List<BoardVO> bList = bDao.selectAll();
 		
+		return bList;
+	}
+	public List<BoardDto> BoardListForFile(){
+		List<BoardDto> bList = bDao.selectAllForFile();
 		return bList;
 	}
 
@@ -35,5 +41,10 @@ public class BoardService {
 			fService.insert(fileList);
 		}
 		return ret;
+	}
+	public BoardDto getContent(long b_seq) {
+		// TODO Auto-generated method stub
+		BoardDto bDto = bDao.findBySeqForFile(b_seq);
+		return bDto;
 	}
 }

@@ -7,6 +7,7 @@ $(function(){
 			$.ajax({
 				url : "${rootPath}/gamer/team",
 				method : "GET",
+				data : {"pg_team" : "SKTT1"}
 			})
 			.done(function(result) {
 				("#modal-body").html(result)

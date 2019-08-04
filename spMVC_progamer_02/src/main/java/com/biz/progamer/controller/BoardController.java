@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.biz.progamer.model.BoardDto;
 import com.biz.progamer.model.BoardVO;
 import com.biz.progamer.service.BoardService;
 
@@ -53,5 +55,11 @@ public class BoardController {
 		int ret = bService.insert(boardVO);
 		return "redirect:/board/list";
 	}
-	
+	@RequestMapping(value="/update",method=RequestMethod.GET)
+	public String update(@RequestParam long b_seq,Model model) {
+		BoardDto bDto = bService.getContent(b_seq);
+		model.addAttribute("boardVO",bDto);
+		model.addAttribute("BODY","BOARD_WRITE");
+		return "home";
+	}
 }
