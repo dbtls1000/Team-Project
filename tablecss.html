@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+        table.list{
+            border-collapse: collapse;
+            border-spacing: 0;
+            width:60%;
+            border:1px solid #ccc;
+            margin:10px auto;
+            font-size: 20px;
+            font-family: 'Jua', sans-serif;
+        }
+        table.list td{
+            text-align: center;
+        }
+        table.list tr:nth-child(odd){
+            background-color: lightblue;
+        }
+        table.list tr:nth-child(even){
+            background-color: lightseagreen;
+        }
+        table.list #tr_head{
+            background-color: lightskyblue;
+        }
+        table.profile{
+            border-collapse: collapse;
+            border-spacing: 0;
+            width:60%;
+            border:1px solid #ccc;
+            margin:10px auto;
+            font-size: 20px;
+            font-family: 'Jua', sans-serif;
+            text-align: center;
+        }
+        table.profile th{
+            background-color: chocolate
+        }
+        table.profile td{
+            background-color: beige;
+        }
+        
+        table.profile img{
+            height: 200px;
+        }
+        table.profile #image{
+            background-color: white;
+        }
+        table.profile #career{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table class="list">
+            <tr id="tr_head">
+                <th>NO</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <td>NO</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+            <tr>
+                <td>NO</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+            <tr>
+                <td>NO</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+            <tr>
+                <td>NO</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+            <tr>
+                <td>NO</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+            <tr>
+                <td>NO</td>
+                <td>제목</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>조회수</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table class="list">
+            <tr id="tr_head">
+                <th>NO.</th>
+                <th>이름</th>
+                <th>ID</th>
+                <th>소속팀</th>
+                <th>생년월일</th>
+                <th>포지션</th>
+            </tr>
+            <tr>
+                <td>NO.</td>
+                <td>이름</td>
+                <td>ID</td>
+                <td>소속팀</td>
+                <td>생년월일</td>
+                <td>포지션</td>
+            </tr>
+            <tr>
+                <td>NO.</td>
+                <td>이름</td>
+                <td>ID</td>
+                <td>소속팀</td>
+                <td>생년월일</td>
+                <td>포지션</td>
+            </tr>
+            <tr>
+                <td>NO.</td>
+                <td>이름</td>
+                <td>ID</td>
+                <td>소속팀</td>
+                <td>생년월일</td>
+                <td>포지션</td>
+            </tr>
+            <tr>
+                <td>NO.</td>
+                <td>이름</td>
+                <td>ID</td>
+                <td>소속팀</td>
+                <td>생년월일</td>
+                <td>포지션</td>
+            </tr>
+            <tr>
+                <td>NO.</td>
+                <td>이름</td>
+                <td>ID</td>
+                <td>소속팀</td>
+                <td>생년월일</td>
+                <td>포지션</td>
+            </tr>
+            <tr>
+                <td>NO.</td>
+                <td>이름</td>
+                <td>ID</td>
+                <td>소속팀</td>
+                <td>생년월일</td>
+                <td>포지션</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table class="profile">
+            <tr>
+                <td id="image" colspan="3" rowspan="4"><img src="../Team-Project/images/xbox.png"></td>
+                <th>이름</th>
+                <td>${GAMER.pg_gamer}</td>
+                <th>ID</th>
+                <td>${GAMER.pg_id}</td>
+            </tr>
+            <tr>
+                <th>현재 소속팀</th>
+                <td>${GAMER.pg_team}</td>
+                <th>이전 소속팀</th>
+                <td>${GAMER.pg_lastteam}</td>
+            </tr>
+            <tr>
+                    <th>포지션</th>
+                    <td colspan="3">${GAMER.pg_position}</td>
+                </tr>
+            <tr>
+                <th>생년월일</th>
+                <td colspan="3">${GAMER.pg_birth}</td>
+            </tr>
+           
+            
+            <tr>
+                <th colspan="7">우승경력</th>
+            </tr>
+            <tr>
+                <td id="career" colspan="7">${GAMER.pg_career}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
