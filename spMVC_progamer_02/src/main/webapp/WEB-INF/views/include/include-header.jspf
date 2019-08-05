@@ -34,18 +34,24 @@
 			}
 		})
 		
-		$("#p_name").keypress(function(){
+		if("FAIL" == "${LOGIN}"){
+			alert("로그인에 실패하셨습니다")
+			$("#login-menu").click()
+		}
+		
+		$("#p_gamer").keypress(function(event){
 			if(event.keyCode == 13){
-				let pro_name = $(this).val()
+				let pro_gamer = $(this).val()
 				$.ajax({
-					url : rootPath +"/gamer/search?pg_name=" + pro_name,
+					url : "${rootPath}/gamer/search?pg_gamer=" + pro_gamer,
 					method : "GET"
 				})
 				.done(function(result){
-					$("#p_name").html(result)
+					$("#p_gamer").html(result)
 				})
 			}
 		})
+		
 	})
 </script>	
 <header>
@@ -67,14 +73,15 @@
 	<ul>
 		<li><a href="${rootPath}/">Home</a></li>
 		<li><a href="#">새소식</a></li>
-		<li><a href="#">리그 일정</a></li>
+		<li><a href="http://www.leagueoflegends.co.kr/?m=esports_intro&mod=esports_schedule"
+				 target="new">리그 일정</a></li>
 		<li><a href="#">리그 순위</a></li>
 		<li><a href="${rootPath}/gamer/list">선수DB</a></li>
 		<li><a href="${rootPath}/board/list">자유게시판</a></li>
 	</ul>
 	<div class="search-box">
 		<p class="fas fa-search"></p>
-		<input type="text" id="p_name" name="p_name" placeholder="선수이름">
+		<input type="text" id="p_gamer" name="p_gamer" placeholder="선수이름">
 		<button>검색</button>
 	</div>
 </nav>

@@ -1,19 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<script>
+$(function(){
+	
+	$(".team").on('click',function() {
+		let id = $(this).attr("id")
+		var team = {"pg_team" : "SKTT1"}
+		if(id == "sktt1"){
+			$("#modal-box").css("display","block")
+			$.ajax({
+				url : "${rootPath}/gamer/team?pg_team=" + "SKTT1",
+				method : "GET"
+			})
+			.done(function(result) {
+				("#modal-body").html(result)
+				$(".modal-header h2").html("SKT T1")
+				$(".modal-header h2").css("text-align","center")
+				$(".modal-footer h3").html("<address> CopyRight &copy; dbsqhtjs@naver.com</address>")
+				$(".modal-footer h3").css("text-align","right")
+			})
+			.fail(function() {
+				alert("fail")
+			})
+		
+		}
+		
+		
+		
+	})
+})
+</script>
 <div class="main">
 	<nav class="listmenu">
 		<p>팀목록</p>
 		<ul>
-			<li><a href="${rootPath}/gamer/sktt1">SKT T1</a></li>
-			<li><a href="${rootPath}/gamer/griffin">Griffin</a></li>
-			<li><a href="${rootPath}/gamer/kz">KZ Dragon-X</a></li>
-			<li><a href="${rootPath}/gamer/sandbox">SANDBOX Gaming</a></li>
-			<li><a href="${rootPath}/gamer/damwon">DAMWON Gaming</a></li>
-			<li><a href="${rootPath}/gamer/hanhwa">HanHwa Life Esports</a></li>
-			<li><a href="${rootPath}/gamer/geng">Gen.G Esports</a></li>
-			<li><a href="${rootPath}/gamer/jinair">Jin Air Greenwings</a></li>
-			<li><a href="${rootPath}/gamer/afreeca">Afreeca Freecs</a></li>
-			<li><a href="${rootPath}/gamer/kt">KT Rolster</a></li>
+			<li><a href="javascript:void(0)" class="team" id="sktt1">SKT T1</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">Griffin</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">KZ Dragon-X</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">SANDBOX Gaming</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">DAMWON Gaming</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">HanHwa Life Esports</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">Gen.G Esports</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">Jin Air Greenwings</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">Afreeca Freecs</a></li>
+			<li><a href="javascript:void(0)" class="team" id="">KT Rolster</a></li>
 		</ul>
 	</nav>
 	<aside></aside>

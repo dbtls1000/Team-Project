@@ -4,38 +4,39 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <fieldset>
 	<form:form modelAttribute="boardVO" enctype="multipart/form-data">
-		<div>
-			<label for="b_date">작성일</label>
+	
+		<div class="in-box">
+			<label for="b_date">작성일자</label>
 			<form:input type="date" id="b_date" path="b_date" />
 			<form:errors path="b_date" />
 		</div>
-		<div>
+		<div class="in-box">
 			<label for="b_time">작성시각</label>
 			<form:input type="text" id="b_time" path="b_time" />
 			<form:errors path="b_time" />
 		</div>
-		<div>
+		<div class="in-box">
 			<label for="b_auth">작성자</label>
 			<form:input type="text" id="b_auth" path="b_auth" />
 			<form:errors path="b_auth" />
 		</div>
-		<div>
+		<div class="in-box">
 			<label for="b_title">제목</label>
 			<form:input type="text" id="b_title" path="b_title" />
 			<form:errors path="b_title" />
 		</div>
-		<div>
+		<div class="in-box">
 			<label for="b_content">내용</label>
-			<form:textarea rows="10" id="b_content" path="b_content" />
-			<form:errors path="b_content" />
+			<form:textarea id="b_content" rows="10" path="b_content" />
 		</div>
-		<div>
-			<input type="file" accept="image" 
+		<div class="in-box">
+			<label for="b_file"></label> 
+			<input type="file" accept="image"
 				multiple="multiple" id="b_files" name="b_files" />
 		</div>
-		<div>
-			<button>등록</button>
-			<!-- <button type="button" onclick="location.href='${rootPath}/board/list'">취소</button> -->
+		
+		<div class="btn-box center">
+			<button class="bz-btn save">저장</button>
 		</div>
 	</form:form>
 </fieldset>

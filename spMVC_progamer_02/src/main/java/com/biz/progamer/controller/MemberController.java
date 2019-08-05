@@ -32,9 +32,14 @@ public class MemberController {
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(@ModelAttribute MemberVO memberVO, Model model,
 			HttpSession httpSession) {
-		memberVO = mService.login(memberVO);
-		if(memberVO != null) httpSession.setAttribute("USER", memberVO);
-		return "redirect:/";
+		MemberVO re_memberVO = mService.login_check(memberVO);
+		if(re_memberVO == null) {
+			model.addAttribute("LOGIN","FAIL");
+			return "redirect:/";
+		} else {
+			httpSession.setAttribute("USER", re_memberVO);
+			return "redirect:/";
+		}
 	}
 	//회원가입
 	@RequestMapping(value="/join",method=RequestMethod.GET)
@@ -43,7 +48,7 @@ public class MemberController {
 	}
 	@RequestMapping(value="/join",method=RequestMethod.POST)
 	public String join(@ModelAttribute MemberVO memberVO, Model model) {
-		int ret =mService.insert(memberVO);
+		int ret = mService.insert(memberVO);
 		return "redirect:/";
 	}
 	//로그아웃
@@ -53,9 +58,10 @@ public class MemberController {
 		httpSession.setAttribute("USER", null);
 		return "redirect:/";
 	}
-	@ResponseBody
-	@RequestMapping(value="/check_id",method=RequestMethod.GET)
-	public String check_id(@RequestParam String m_userid, Model model) {
-		return mService.check_id(m_userid);
-	}
+//	@ResponseBody
+//	@RequestMapping(value="/check_id",method=RequestMethod.GET)
+//	public String check_id(@RequestParam String m_userid, Model model) {
+//		return mService.check_id(m_userid);
+//		
+//	}
 }

@@ -1,13 +1,16 @@
-$(function(){
+/*$(function(){
 	
-	$(".team").click(function() {
-		let team = $(this).attr("id")
-		
-		if(team == SKTT1){
+	$(".team").on('click',function(event) {
+		let id = $(this).attr("id")
+		var team = {pg_team , "sktt1"}
+		if(id == sktt1){
+			$("#modal-box").css("display","block")
 			$.ajax({
 				url : "${rootPath}/gamer/team",
-				method : "GET",
-				data : {"pg_team" : "SKTT1"}
+				method : "POST",
+				type : "json",
+				contentType : "application/json",
+				data : JSON.stringify(team)
 			})
 			.done(function(result) {
 				("#modal-body").html(result)
@@ -16,9 +19,15 @@ $(function(){
 				$(".modal-footer h3").html("<address> CopyRight &copy; dbsqhtjs@naver.com</address>")
 				$(".modal-footer h3").css("text-align","right")
 			})
+			.fail(function() {
+				alert("ㅁㄴㅇㄹ")
+			})
+			.always(function() {
+				alert("ㅁㄴㅇㄻㄴㅇㄹ")
+			})
 		}
 		
 		
 		
 	})
-})
+})*/

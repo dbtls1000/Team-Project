@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<script>
+	$(function(){
+		
+		$(".gamer_profile").click(function() {
+			let pg_num = $(this).attr("data-seq")
+			location.href="${rootPath}/gamer/profile?pg_num=" + pg_num
+		})
+	})
+</script>
+    <table class="list">
+    	<tr>
+    		<th>NO.</th>
+    		<th>이름</th>
+    		<th>ID</th>
+    		<th>소속팀</th>
+    		<th>생년월일</th>
+    		<th>포지션</th>
+    	</tr>
+    	<c:choose>
+    		<c:when test="${empty SEARCH}">
+    			<tr>
+    				<td colspan="5">데이터가 없습니다</td>
+    			</tr>
+    		</c:when>
+    		<c:otherwise>
+    			<c:forEach items="${SEARCH}" var="pgVO" varStatus="s">
+    				<tr class="gamer_profile" data-seq="${pgVO.pg_num}">
+    					<td>${s.count}</td>
+    					<td>${pgVO.pg_gamer}</td>
+    					<td>${pgVO.pg_id}</td>
+    					<td>${pgVO.pg_team}</td>
+    					<td>${pgVO.pg_birth}</td>
+    					<td>${pgVO.pg_position}</td>
+    				</tr>
+    			</c:forEach>
+    		</c:otherwise>
+    	</c:choose>
+    </table>

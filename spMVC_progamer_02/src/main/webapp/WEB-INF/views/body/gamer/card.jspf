@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 
-
-<div id="gamer_profile" data-seq="${CARD.pg_seq}">
-	<div>${CARD.pg_position}</div>
-	<img src="/images/upload/${CARD.pg_img}">
-	<div>${CARD.pg_name}</div>
+<div id="gamer_profile" data-seq="${CARD.pg_num}" class="card">
+	<c:if test="${!empty CARD.pg_num}">
+		<div class="card_content">${CARD.pg_position}</div>
+		<img src="${rootPath}/images/${CARD.pg_img}">
+		<div class="card_content">${CARD.pg_name}</div>
+	</c:if>
 </div>
 
 

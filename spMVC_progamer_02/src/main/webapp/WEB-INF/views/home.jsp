@@ -17,10 +17,12 @@
 	href="${rootPath}/css/join.css?ver=20190729">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/login.css?ver=20190729">
-	<link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/list.css?ver=20190729">		
+<link rel="stylesheet" type="text/css"
+	href="${rootPath}/css/list.css?ver=20190729">
+<link rel="stylesheet" type="text/css"
+	href="${rootPath}/css/grid.css?ver=20190805">		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="${rootPath}/js/password_check.js?ver=2019072302"></script>
+<script src="${rootPath}/resources/js/teamlist.js?ver=2019080501"></script>
 <!--  -->
 </head>
 
@@ -66,6 +68,10 @@
 		<c:when test="${BODY == 'BOARD_WRITE'}">
 			<%@ include file="/WEB-INF/views/body/board/write.jspf"%>
 		</c:when>
+		<c:when test="${BODY == 'PROFILE'}">
+			<%@ include file="/WEB-INF/views/body/gamer/view.jspf"%>
+		</c:when>
+		
 		<c:otherwise>
 			<%@ include file="/WEB-INF/views/body/main.jspf"%>
 		</c:otherwise>

@@ -32,4 +32,8 @@ public interface MemberDao {
 	
 	@Select(" SELECT m_userid FROM tbl_member WHERE m_userid = #{m_userid} ")
 	public String check_id(String m_userid);
+	
+	@Select(" SELECT * FROM tbl_member "
+			+ " WHERE m_userid = #{m_userid} ")
+	public MemberVO login_id_check(MemberVO memberVO);
 }

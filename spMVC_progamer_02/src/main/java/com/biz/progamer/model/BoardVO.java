@@ -18,7 +18,7 @@ import lombok.ToString;
 public class BoardVO {
 	private long b_seq;//	NUMBER	Primary Key,
 	private long b_main_seq;//	NUMBER	,
-	private int b_layer;//	NUMBER	,
+	private long b_layer;//	NUMBER	,
 	private String b_date;//	VARCHAR2(10)	,
 	private String b_time;//	VARCHAR2(20)	,
 	private String b_auth;//	nVARCHAR2(50)	,

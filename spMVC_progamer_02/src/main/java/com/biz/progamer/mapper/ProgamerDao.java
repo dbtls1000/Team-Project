@@ -10,9 +10,9 @@ public interface ProgamerDao {
 	@Select(" SELECT * FROM tbl_progamer ")
 	public List<ProgamerVO> selectAll();
 	
-	@Select(" SELECT * FROM tbl_progamer WHERE pg_seq"
-			+ " = #{pg_seq} ")
-	public ProgamerVO findBySeq(long pg_seq);
+	@Select(" SELECT * FROM tbl_progamer WHERE pg_num"
+			+ " = #{pg_num} ")
+	public ProgamerVO findByNum(long pg_num);
 	
 	@Select(" SELECT * FROM tbl_progamer WHERE pg_team = #{pg_team} ")
 	public List<ProgamerVO> findByTeam(String pg_team);
@@ -24,7 +24,6 @@ public interface ProgamerDao {
 	public int delete(long pg_seq);
 	
 	@Select(" SELECT * FROM tbl_progamer "
-			+ " WHERE pg_name LIKE '%' || #{pg_name} || '%' "
-			+ " , pg_nick LIKE '%' || #{pg_nick} || '%' ")
-	public List<ProgamerVO> findByNameNick(String pg_name);
+			+ " WHERE pg_gamer LIKE '%' || #{pg_gamer} || '%' ")
+	public List<ProgamerVO> findByNameNick(String pg_gamer);
 }

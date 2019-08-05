@@ -50,9 +50,9 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/write",method=RequestMethod.POST)
-	public String writeiup(@ModelAttribute BoardVO boardVO, Model model) {
-		
+	public String write_up(@ModelAttribute BoardVO boardVO, Model model) {
 		int ret = bService.insert(boardVO);
+		
 		return "redirect:/board/list";
 	}
 	@RequestMapping(value="/update",method=RequestMethod.GET)

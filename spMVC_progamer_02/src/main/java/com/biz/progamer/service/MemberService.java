@@ -2,8 +2,8 @@ package com.biz.progamer.service;
 
 import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.biz.progamer.mapper.MemberDao;
@@ -15,6 +15,9 @@ public class MemberService {
 	@Autowired
 	MemberDao mDao;
 	
+	@Autowired
+	BCryptPasswordEncoder passwordEncoder;
+	
 	public List<MemberVO> selectAll() {
 		// TODO Auto-generated method stub
 		List<MemberVO> mList = mDao.selectAll();
@@ -23,6 +26,11 @@ public class MemberService {
 
 	public int insert(MemberVO memberVO) {
 		// TODO Auto-generated method stub
+		String strPassword = memberVO.getM_password();
+		String cryptPassword = passwordEncoder.encode(strPassword);
+		
+		memberVO.setM_password(cryptPassword);
+		
 		List<MemberVO> mList = mDao.selectAll();
 		 
 		if(mList.size() > 0) memberVO.setM_role("USER");
@@ -45,5 +53,20 @@ public class MemberService {
 	
 	public String check_id(String m_userid) {
 		return mDao.check_id(m_userid);
+	}
+
+	public MemberVO login_check(MemberVO memberVO) {
+		// TODO Auto-generated method stub
+		MemberVO re_memberVO = mDao.login_id_check(memberVO);
+		if(re_memberVO != null) {
+			String cryptPassword = re_memberVO.getM_password();
+			String strPassword = memberVO.getM_password();
+			if(passwordEncoder.matches(strPassword, cryptPassword)) {
+				return re_memberVO;
+			} else {
+				return null;
+			}
+		}
+		return null;
 	}
 }

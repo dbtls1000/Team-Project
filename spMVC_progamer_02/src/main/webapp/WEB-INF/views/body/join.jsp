@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="rootPath" value="${pageContext.request.contextPath}" />	
 <style>
 button {
 	background-color: grey;
@@ -9,7 +11,29 @@ button {
 	font-size: 10px;
 }
 </style>
+<script>
+$(function(){
+	
+	
+	$("#m_password").keyup(function(){
+		$("#check").html("");
+	})
+	
+	$("#m_repassword").keyup(function(){
+		
+		if($("#m_password").val() != $("#m_repassword").val() ){
+			$("#check").html("비밀번호 불일치<br>")
+			$("#check").css("color","red")
+		} else {
+			$("#check").html("비밀번호 일치<br>")
+			$("#check").css("color","blue")
+		}
+		
+	})
+	
+})
 
+</script>
 <form action="${rootPath}/member/join" method="POST">
 	<fieldset class="info">
 		<legend>회원가입</legend>

@@ -20,4 +20,5 @@ public class ProgamerVO {
 	private String pg_birth;
 	private String pg_career;
 	private String pg_lastteam;
+	private String pg_img;
 }

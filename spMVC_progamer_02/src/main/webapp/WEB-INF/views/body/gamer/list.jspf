@@ -1,7 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<script>
+	$(function(){
+		
+		$(".gamer_profile").click(function() {
+			let pg_num = $(this).attr("data-seq")
+			location.href="${rootPath}/gamer/profile?pg_num=" + pg_num
+		})
+	})
+</script>
     <table class="list">
     	<tr>
     		<th>NO.</th>
@@ -19,7 +27,7 @@
     		</c:when>
     		<c:otherwise>
     			<c:forEach items="${GLIST}" var="pgVO" varStatus="s">
-    				<tr class="c-row">
+    				<tr class="gamer_profile" data-seq="${pgVO.pg_num}">
     					<td>${s.count}</td>
     					<td>${pgVO.pg_gamer}</td>
     					<td>${pgVO.pg_id}</td>

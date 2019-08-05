@@ -9,7 +9,7 @@ public class BoardSQL {
 			INSERT_INTO("tbl_board");
 			INTO_COLUMNS("b_seq").INTO_VALUES("BOARD_SEQ.NEXTVAL");
 			INTO_COLUMNS("b_main_seq").INTO_VALUES("#{b_main_seq}");
-			INTO_COLUMNS("b_layer").INTO_VALUES("#{b_layer}");
+			INTO_COLUMNS("b_layer").INTO_VALUES("#{b_layer,jdbcType=INTEGER}");
 			INTO_COLUMNS("b_date").INTO_VALUES("#{b_date,jdbcType=VARCHAR}");
 			INTO_COLUMNS("b_time").INTO_VALUES("#{b_time,jdbcType=VARCHAR}");
 			INTO_COLUMNS("b_auth").INTO_VALUES("#{b_auth,jdbcType=VARCHAR}");
