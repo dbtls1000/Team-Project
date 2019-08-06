@@ -30,10 +30,6 @@ public interface MemberDao {
 	@Delete(" DELETE FROM tbl_member WHERE m_userid = #{m_userid} ")
 	public int delete(String m_userid);
 	
-	@Select(" SELECT m_userid FROM tbl_member WHERE m_userid = #{m_userid} ")
-	public String check_id(String m_userid);
-	
-	@Select(" SELECT * FROM tbl_member "
-			+ " WHERE m_userid = #{m_userid} ")
-	public MemberVO login_id_check(MemberVO memberVO);
+	@Select(" SELECT * FROM tbl_member WHERE m_userid = #{m_userid} ")
+	public MemberVO login_id_check(String m_userid);
 }

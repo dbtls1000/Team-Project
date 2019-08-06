@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  <table border="1">
+  <table class="profile">
         <tr>
-            <td colspan="3" rowspan="4"><img src="${rootPath}/resources/images/${GAMER.pg_img}"></td>
+            <td colspan="3" rowspan="4" id="image"><img src="${rootPath}/resources/images/${GAMER.pg_img}"></td>
             <th>이름</th>
             <td>${GAMER.pg_gamer}</td>
             <th>ID</th>
@@ -25,7 +25,7 @@
         <tr>
             <th colspan="7">우승경력</th>
         </tr>
-        <tr>
-            <td colspan="7">${GAMER.pg_career}</td>
+        <tr class="career">
+            <td colspan="7" id="career">${GAMER.pg_career}</td>
         </tr>
     </table>

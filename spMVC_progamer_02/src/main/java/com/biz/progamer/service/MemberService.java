@@ -51,20 +51,28 @@ public class MemberService {
 		return memberVO;
 	}
 	
-	public String check_id(String m_userid) {
-		return mDao.check_id(m_userid);
-	}
+//	public MemberVO login_check(MemberVO memberVO) {
+//		// TODO Auto-generated method stub
+//		MemberVO re_memberVO = mDao.login_id_check(memberVO);
+//		if(re_memberVO != null) {
+//			String cryptPassword = re_memberVO.getM_password();
+//			String strPassword = memberVO.getM_password();
+//			if(passwordEncoder.matches(strPassword, cryptPassword)) {
+//				return re_memberVO;
+//			} else {
+//				return null;
+//			}
+//		}
+//		return null;
+//	}
 
-	public MemberVO login_check(MemberVO memberVO) {
+	public MemberVO login_id_check(String m_userid, String m_password) {
 		// TODO Auto-generated method stub
-		MemberVO re_memberVO = mDao.login_id_check(memberVO);
-		if(re_memberVO != null) {
-			String cryptPassword = re_memberVO.getM_password();
-			String strPassword = memberVO.getM_password();
-			if(passwordEncoder.matches(strPassword, cryptPassword)) {
-				return re_memberVO;
-			} else {
-				return null;
+		MemberVO memberVO = mDao.login_id_check(m_userid);
+		if(memberVO != null) {
+			String cryptPassword = memberVO.getM_password();
+			if(passwordEncoder.matches(m_password, cryptPassword)) {
+				return memberVO;
 			}
 		}
 		return null;

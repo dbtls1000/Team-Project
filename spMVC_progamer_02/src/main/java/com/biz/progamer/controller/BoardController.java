@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.biz.progamer.model.BoardDto;
 import com.biz.progamer.model.BoardVO;
@@ -18,11 +19,17 @@ import com.biz.progamer.service.BoardService;
 
 
 @Controller
+@SessionAttributes("boardVO")
 @RequestMapping(value="/board")
 public class BoardController {
 	
 	@Autowired
 	BoardService bService;
+	
+	@ModelAttribute("boardVO")
+	public BoardVO newBoardVO() {
+		return new BoardVO();
+	}
 	
 	@RequestMapping(value="/list",method=RequestMethod.GET)
 	public String list(Model model) {
@@ -60,6 +67,14 @@ public class BoardController {
 		BoardDto bDto = bService.getContent(b_seq);
 		model.addAttribute("boardVO",bDto);
 		model.addAttribute("BODY","BOARD_WRITE");
+		return "home";
+	}
+	
+	@RequestMapping(value="/view",method=RequestMethod.GET)
+	public String view(@RequestParam long b_seq, Model model) {
+		BoardVO bVO = bService.findBySeq(b_seq);
+		model.addAttribute("BVIEW",bVO);
+		model.addAttribute("BODY","BOARD_VIEW");
 		return "home";
 	}
 }

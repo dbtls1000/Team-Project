@@ -31,65 +31,6 @@ public class GamerController {
 		model.addAttribute("BODY","GAMER_LIST");
 		return "home";
 	}
-	@RequestMapping(value="sktt1",method=RequestMethod.GET)
-	public String view_SKT_T1(Model model) {
-		model.addAttribute("BODY","SKT_T1");
-		return "home";
-	}
-	@RequestMapping(value="griffin",method=RequestMethod.GET)
-	public String view_GRIFFIN(Model model) {
-		model.addAttribute("BODY","GRIFFIN");
-		return "home";
-	}
-	@RequestMapping(value="kz",method=RequestMethod.GET)
-	public String view_KZ(Model model) {
-		model.addAttribute("BODY","KZ");
-		return "home";
-	}
-	@RequestMapping(value="damwon",method=RequestMethod.GET)
-	public String view_DAMWON(Model model) {
-		model.addAttribute("BODY","DAMWON");
-		return "home";
-	}
-	@RequestMapping(value="sandbox",method=RequestMethod.GET)
-	public String view_SANDBOX(Model model) {
-		model.addAttribute("BODY","SANDBOX");
-		return "home";
-	}
-	@RequestMapping(value="hanhwa",method=RequestMethod.GET)
-	public String view_HANHWA(Model model) {
-		model.addAttribute("BODY","HANHWA");
-		return "home";
-	}
-	@RequestMapping(value="geng",method=RequestMethod.GET)
-	public String view_GENG(Model model) {
-		model.addAttribute("BODY","GENG");
-		return "home";
-	}
-	@RequestMapping(value="afreeca",method=RequestMethod.GET)
-	public String view_AFREECA(Model model) {
-		model.addAttribute("BODY","AFREECA");
-		return "home";
-	}
-	@RequestMapping(value="jinair",method=RequestMethod.GET)
-	public String view_JINAIR(Model model) {
-		model.addAttribute("BODY","JINAIR");
-		return"home";
-	}
-	@RequestMapping(value="kt",method=RequestMethod.GET)
-	public String view_KT(Model model) {
-		model.addAttribute("BODY","KT");
-		return "home";
-	}
-	
-	@RequestMapping(value="/search",method=RequestMethod.GET)
-	public String search(@RequestParam String pg_gamer, Model model) {
-		List<ProgamerVO> pgList = pgService.findByNameNick(pg_gamer);
-		
-		model.addAttribute("SEARCH",pgList);
-		return "body/gamer/search";
-	}
-	
 	
 	@RequestMapping(value="/team",method=RequestMethod.GET)
 	public String team(@RequestParam(value="pg_team",required=false) String pg_team,Model model) {
@@ -112,6 +53,15 @@ public class GamerController {
 		ProgamerVO progamerVO = pgService.findByNum(pg_num);
 		model.addAttribute("GAMER",progamerVO);
 		model.addAttribute("BODY","PROFILE");
+		return "home";
+	}
+	
+	@RequestMapping(value="/search",method=RequestMethod.GET)
+	public String search(@RequestParam String pg_gamer, Model model) {
+		List<ProgamerVO> pgList = pgService.findByNameNick(pg_gamer);
+		log.debug("선수 이름 : " + pg_gamer);
+		model.addAttribute("SEARCH",pgList);
+		model.addAttribute("BODY","SEARCH");
 		return "home";
 	}
 }

@@ -1,8 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<table>
-	<tr>
+<script>
+	$(function(){
+		$(".board_view").click(function(){
+			let b_seq = $(this).attr("data-seq")
+			location.href = "${rootPath}/board/view?b_seq=" + b_seq
+		})
+	})
+</script>
+<table class="list">
+	<tr class="tr_head">
 		<th>NO</th>
 		<th>제목</th>
 		<th>작성자</th>
@@ -17,7 +25,7 @@
 		</c:when>
 		<c:otherwise>
 			<c:forEach items="${BLIST}" var="bVO" varStatus="s">
-				<tr>
+				<tr class="board_view" data-seq="${bVO.b_seq}">
 					<td>${s.count}</td>
 					<td>${bVO.b_title}</td>
 					<td>${bVO.b_auth}</td>
@@ -28,6 +36,6 @@
 		</c:otherwise>
 	</c:choose>
 </table>
-<div>
+<div class="button">
 	<button onclick="location.href='${rootPath}/board/write'">글쓰기</button>
 </div>

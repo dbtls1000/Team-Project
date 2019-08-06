@@ -47,4 +47,9 @@ public class BoardService {
 		BoardDto bDto = bDao.findBySeqForFile(b_seq);
 		return bDto;
 	}
+	public BoardVO findBySeq(long b_seq) {
+		// TODO Auto-generated method stub
+		BoardVO bVO = bDao.findBySeq(b_seq);
+		return bVO;
+	}
 }

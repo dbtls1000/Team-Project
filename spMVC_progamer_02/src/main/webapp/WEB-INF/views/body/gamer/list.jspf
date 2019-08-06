@@ -8,10 +8,11 @@
 			let pg_num = $(this).attr("data-seq")
 			location.href="${rootPath}/gamer/profile?pg_num=" + pg_num
 		})
+		
 	})
 </script>
     <table class="list">
-    	<tr>
+    	<tr class="tr_head">
     		<th>NO.</th>
     		<th>이름</th>
     		<th>ID</th>

@@ -23,24 +23,34 @@ public class MemberController {
 	
 	@Autowired
 	MemberService mService;
+	
+	
 	//로그인부분
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(Model model) {
 		model.addAttribute("BODY","LOGIN");
 		return "body/login";
 	}
+	
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(@ModelAttribute MemberVO memberVO, Model model,
 			HttpSession httpSession) {
-		MemberVO re_memberVO = mService.login_check(memberVO);
-		if(re_memberVO == null) {
+		String m_userid = memberVO.getM_userid();
+		String m_password = memberVO.getM_password();
+		
+		memberVO = mService.login_id_check(m_userid,m_password);
+		if(memberVO != null) {
+			httpSession.setAttribute("USER", memberVO);
+		} else {
 			model.addAttribute("LOGIN","FAIL");
 			return "redirect:/";
-		} else {
-			httpSession.setAttribute("USER", re_memberVO);
-			return "redirect:/";
 		}
+		return "redirect:/";
 	}
+	
+	
+	
+	
 	//회원가입
 	@RequestMapping(value="/join",method=RequestMethod.GET)
 	public String join(Model model) {

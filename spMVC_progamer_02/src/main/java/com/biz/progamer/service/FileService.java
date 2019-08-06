@@ -20,7 +20,7 @@ public class FileService {
 	@Autowired
 	FileDao fDao;
 	
-	private String upLoadFolder = "C:/bizwork/upload";
+	private final String upLoadFolder = "C:/bizwork/upload/images";
 	
 	public List<FileVO> getFileList(BoardVO boardVO){
 		

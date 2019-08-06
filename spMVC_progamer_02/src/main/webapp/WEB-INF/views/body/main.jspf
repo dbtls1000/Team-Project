@@ -2,100 +2,205 @@
 	pageEncoding="UTF-8"%>
 <script>
 $(function(){
-	
-	$(".team").on('click',function() {
-		let id = $(this).attr("id")
-		var team = {"pg_team" : "SKTT1"}
-		if(id == "sktt1"){
-			$("#modal-box").css("display","block")
-			$.ajax({
-				url : "${rootPath}/gamer/team?pg_team=" + "SKTT1",
-				method : "GET"
-			})
-			.done(function(result) {
-				("#modal-body").html(result)
-				$(".modal-header h2").html("SKT T1")
-				$(".modal-header h2").css("text-align","center")
-				$(".modal-footer h3").html("<address> CopyRight &copy; dbsqhtjs@naver.com</address>")
-				$(".modal-footer h3").css("text-align","right")
-			})
-			.fail(function() {
-				alert("fail")
-			})
-		
-		}
-		
-		
-		
+	$(".sktt1").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "SKTT1",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("SKT T1")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
 	})
+	$(".griffin").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "Griffin",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("GRIFFIN")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".kz").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "KZ_DragonX",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("KZ DragonX")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".damwon").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "DAMWON_gaming",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("DAMWON Gaming")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".sandbox").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "SANDBOX_Gaming",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("SANDBOX Gaming")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".hanhwa").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "Hanwha_Life_Esports",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("Hanwha Life Esports")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".geng").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "Gen.G_Esports",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("Gen.G Esports")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".afreeca").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "Afreeca_Freecs",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("Afreeca_Freecs")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".kt").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "KT_Rolster",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("KT_Rolster")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	$(".jinair").on('click',function() {
+		$("#modal-box").css("display","block")
+		$.ajax({
+			url : "${rootPath}/gamer/team?pg_team=" + "Jin_Air_Greenwings",
+			method : "GET"
+		})
+		.done(function(result) {
+			$("#modal-body").html(result)
+			$(".modal-header h2").html("Jin_Air_Greenwings")
+			$(".modal-header h2").css("text-align","center")
+			$(".modal-header h2").css("color","lightblue")
+		})
+	})
+	
 })
 </script>
 <div class="main">
 	<nav class="listmenu">
 		<p>팀목록</p>
 		<ul>
-			<li><a href="javascript:void(0)" class="team" id="sktt1">SKT T1</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">Griffin</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">KZ Dragon-X</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">SANDBOX Gaming</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">DAMWON Gaming</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">HanHwa Life Esports</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">Gen.G Esports</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">Jin Air Greenwings</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">Afreeca Freecs</a></li>
-			<li><a href="javascript:void(0)" class="team" id="">KT Rolster</a></li>
+			<li><a href="javascript:void(0)" class="sktt1">SKT T1</a></li>
+			<li><a href="javascript:void(0)" class="griffin">Griffin</a></li>
+			<li><a href="javascript:void(0)" class="kz">KZ Dragon-X</a></li>
+			<li><a href="javascript:void(0)" class="sandbox">SANDBOX Gaming</a></li>
+			<li><a href="javascript:void(0)" class="damwon">DAMWON Gaming</a></li>
+			<li><a href="javascript:void(0)" class="hanhwa">HanHwa Life Esports</a></li>
+			<li><a href="javascript:void(0)" class="geng">Gen.G Esports</a></li>
+			<li><a href="javascript:void(0)" class="jinair">Jin Air Greenwings</a></li>
+			<li><a href="javascript:void(0)" class="afreeca">Afreeca Freecs</a></li>
+			<li><a href="javascript:void(0)" class="kt">KT Rolster</a></li>
 		</ul>
 	</nav>
 	<aside></aside>
 	<table class="imgmenu">
 		<tr>
-			<td><a href="${rootPath}/gamer/sktt1"><img
+			<td><a href="javascript:void(0)" class="sktt1"><img
 					src="${rootPath}/resources/images/SKTT1.png" alt="SKT T1"></a></td>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="griffin"><img
 					src="${rootPath}/resources/images/Griffin.png" alt="Griffin"></a></td>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="kz"><img
 					src="${rootPath}/resources/images/KZ_Dragon-X.png"
 					alt="KingZone Dragon-X"></a></td>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="sandbox"><img
 					src="${rootPath}/resources/images/SANDBOX_Gaming.png"
 					alt="SANDBOX Gaiming"></a></td>
 		</tr>
 		<tr>
-			<td><a href="${rootPath}/gamer/sktt1">SKT T1</a></td>
-			<td><a href="#">Griffin</a></td>
-			<td><a href="#">KZ Dragon-X</a></td>
-			<td><a href="#">SANDBOX Gaming</a></td>
+			<td><a href="javascript:void(0)" class="sktt1">SKT T1</a></td>
+			<td><a href="javascript:void(0)" class="griffin">Griffin</a></td>
+			<td><a href="javascript:void(0)" class="kz">KZ Dragon-X</a></td>
+			<td><a href="javascript:void(0)" class="sandbox">SANDBOX Gaming</a></td>
 		</tr>
 		<tr>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="hanhwa"><img
 					src="${rootPath}/resources/images/HanHwa_Life_Esports.png"
 					alt="HanHwa Life Esports"></a></td>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="geng"><img
 					src="${rootPath}/resources/images/Gen.G_Esports.png"
 					alt="Gen.G_Esports"></a></td>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="jinair"><img
 					src="${rootPath}/resources/images/Jin_Air_Greenwings.png"
 					alt="Jin Air Greenwings"></a></td>
-			<td><a href="#"><img
+			<td><a href="javascript:void(0)" class="afreeca"><img
 					src="${rootPath}/resources/images/Afreeca_Freecs.png"
 					alt="Afreeca Freecs"></a></td>
 		</tr>
 		<tr>
-			<td><a href="#">HanHwa Life Esports</a></td>
-			<td><a href="#">Gen.G Esports</a></td>
-			<td><a href="#">Jin Air Greenwings</a></td>
-			<td><a href="#">Afreeca Freecs</a></td>
+			<td><a href="javascript:void(0)" class="hanhwa">HanHwa Life Esports</a></td>
+			<td><a href="javascript:void(0)" class="geng">Gen.G Esports</a></td>
+			<td><a href="javascript:void(0)" class="jinair">Jin Air Greenwings</a></td>
+			<td><a href="javascript:void(0)" class="afreeca">Afreeca Freecs</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><a href="#" id="item1"><img
+			<td colspan="2"><a href="javascript:void(0)" class="damwon"id="item1"><img
 					src="${rootPath}/resources/images/DAMWON_Gaming.png"
 					alt="DAMWON Gaiming"></a></td>
-			<td colspan="2"><a href="#" id="item2"><img
+			<td colspan="2"><a href="javascript:void(0)" class="kt" id="item2"><img
 					src="${rootPath}/resources/images/KT_Rolster.png" alt="KT Rolster"></a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><a href="#" id="item3">DAMWON Gaming</a></td>
-			<td colspan="2"><a href="#" id="item4">KT Rolster</a></td>
+			<td colspan="2"><a href="javascript:void(0)" class="damwon" id="item3">DAMWON Gaming</a></td>
+			<td colspan="2"><a href="javascript:void(0)" class="kt" id="item4">KT Rolster</a></td>
 		</tr>
 	</table>
 	<aside class="img">

@@ -2,34 +2,11 @@
 	pageEncoding="UTF-8"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />	
-<style>
-button {
-	background-color: grey;
-	color: white;
-	border-radius: 10px;
-	padding: 8px 20px;
-	font-size: 10px;
-}
-</style>
+
 <script>
 $(function(){
 	
 	
-	$("#m_password").keyup(function(){
-		$("#check").html("");
-	})
-	
-	$("#m_repassword").keyup(function(){
-		
-		if($("#m_password").val() != $("#m_repassword").val() ){
-			$("#check").html("비밀번호 불일치<br>")
-			$("#check").css("color","red")
-		} else {
-			$("#check").html("비밀번호 일치<br>")
-			$("#check").css("color","blue")
-		}
-		
-	})
 	
 })
 
@@ -67,6 +44,8 @@ $(function(){
 			<label for="m_tel">전화번호 : </label> <input type="text" name="m_tel"
 				id="m_tel" placeholder="전화번호를 입력해주세요">
 		</div>
-		<button>회원가입</button>
+		<div class="button">
+			<button>회원가입</button>
+		</div>
 	</fieldset>
 </form>
