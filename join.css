@@ -1,0 +1,42 @@
+fieldset.join{
+    width: 25%;
+    margin: 15px auto;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    padding: 15px;
+    font-family: 'Jua', sans-serif;
+}
+fieldset.join legend{
+    font-size: 24px;
+    text-align: center;
+}
+div.div1 label{
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+}
+div.div1 input{
+    width:70%;
+    height: 20px;
+    margin-bottom: 5px;
+    border: 1.5px solid lightseagreen;
+}
+div.div1 input:focus{
+    width:80%;
+    background-color: lightblue;
+}
+div.button{
+    text-align: center;
+    margin-right: 100px;
+}
+div.button button{
+    background-color: darkslateblue;
+    color: ghostwhite;
+    font-size: bold;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+div.button button:hover{
+    background-color: ghostwhite;
+    color: darkslateblue;
+    transition-duration: 0.3s;
+}
