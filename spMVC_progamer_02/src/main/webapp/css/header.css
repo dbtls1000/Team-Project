@@ -26,15 +26,17 @@ header ul li {
 	list-style: none;
 	text-align: right;
 	margin: 0;
+	color:black;
 }
 
 header ul li a {
 	margin: 0 10px;
 	text-decoration: none;
+	color:inherit;
 }
 
 header ul li a:hover {
-	color: indigo;
+	color: white;	
 }
 
 header img {
@@ -43,7 +45,7 @@ header img {
 
 header h2 {
 	display: block;
-	color: darkblue;
+	color: black;
 	font-size: 50px;
 }
 
@@ -63,7 +65,7 @@ nav.search ul {
 nav.search ul li {
 	display: block;
 	list-style: none;
-	color: darkblue;
+	color: black;
 	font-size: 20px;
 }
 
@@ -80,17 +82,9 @@ nav.search ul li a:hover {
 div.search-box {
 	display: block;
 }
-
-div.search-box button {
-	border: 0;
-	background: orchid;
-	margin: 0;
-	border: 1px solid purple;
-	padding: 1px 6px;
-	outline: none;
+div.search-box input{
 	border-radius: 5px;
-	cursor: pointer;
-	color: white;
+	padding:5px;
+	margin-bottom:5px;
 }
-
 

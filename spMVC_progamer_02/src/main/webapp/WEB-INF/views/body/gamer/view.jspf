@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<script>
+$(function(){
+	if("${USER.m_role}" == "ADMIN" ){
+		$(".admin_button").show()
+	}
+})
+</script>
   <table class="profile">
         <tr>
             <td colspan="3" rowspan="4" id="image"><img src="${rootPath}/resources/images/${GAMER.pg_img}"></td>
@@ -29,3 +36,8 @@
             <td colspan="7" id="career">${GAMER.pg_career}</td>
         </tr>
     </table>
+    <div class="button">
+    	<button class="admin_button" style="display:none">등록</button>
+    	<button class="admin_button" style="display:none">수정</button>
+    	<button class="admin_button" style="display:none">삭제</button>
+    </div>

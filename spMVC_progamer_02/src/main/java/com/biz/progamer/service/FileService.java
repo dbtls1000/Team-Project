@@ -20,9 +20,9 @@ public class FileService {
 	@Autowired
 	FileDao fDao;
 	
-	private final String upLoadFolder = "C:/bizwork/upload/images";
+	private final String upLoadFolder = "C:/bizwork/upload";
 	
-	public List<FileVO> getFileList(BoardVO boardVO){
+	public void uploadFileList(BoardVO boardVO){
 		
 		List<MultipartFile> files = boardVO.getB_files();
 		long b_seq = boardVO.getB_seq();
@@ -33,26 +33,30 @@ public class FileService {
 			String uuString = UUID.randomUUID().toString();
 			String saveName = uuString + "_" + originName;
 			
-			fileList.add(FileVO.builder().board_file_seq(b_seq)
-										.file_name(saveName)
-										.file_origin_name(originName).build());
+			
 			
 			File upLoadFileName = new File(upLoadFolder,saveName);
 			try {
 				file.transferTo(upLoadFileName);
+				fDao.insert(FileVO.builder()
+							.file_board_seq(b_seq)
+							.file_name(saveName)
+							.file_origin_name(originName).build());
 			} catch (IllegalStateException | IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		return fileList;
 	}
 
-	public void insert(List<FileVO> fileList) {
-		// TODO Auto-generated method stub
-		for(FileVO fileVO : fileList) {
-			fDao.insert(fileVO);
+	public boolean file_delete(long file_seq) {
+		FileVO fileVO = fDao.findBySeq(file_seq);
+		File delFile = new File(upLoadFolder, fileVO.getFile_name());
+		if(delFile.exists()) {
+			delFile.delete();
+			fDao.delete(file_seq);
+			return true;
 		}
+		return false;
 	}
-	
 }

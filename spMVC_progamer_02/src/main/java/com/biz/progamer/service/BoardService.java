@@ -37,8 +37,7 @@ public class BoardService {
 		
 		if(boardVO.getB_files().size()>0 && 
 				!boardVO.getB_files().get(0).getOriginalFilename().isEmpty()) {
-			List<FileVO> fileList = fService.getFileList(boardVO);
-			fService.insert(fileList);
+			fService.uploadFileList(boardVO);
 		}
 		return ret;
 	}
@@ -47,9 +46,26 @@ public class BoardService {
 		BoardDto bDto = bDao.findBySeqForFile(b_seq);
 		return bDto;
 	}
+	
 	public BoardVO findBySeq(long b_seq) {
 		// TODO Auto-generated method stub
 		BoardVO bVO = bDao.findBySeq(b_seq);
 		return bVO;
+	}
+	
+	public int update(BoardVO boardVO) {
+		// TODO Auto-generated method stub
+		int ret = bDao.update(boardVO);
+		
+		if(boardVO.getB_files().size()>0 && !boardVO.getB_files().get(0).getOriginalFilename().isEmpty()) {
+			fService.uploadFileList(boardVO);
+		}
+		
+		return ret;
+	}
+	public int delete(long b_seq) {
+		// TODO Auto-generated method stub
+		int ret = bDao.delete(b_seq);
+		return ret;
 	}
 }

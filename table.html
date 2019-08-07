@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+        table.board{
+            border-collapse: collapse;
+            border-spacing: 0;
+            width:45%;
+            border:1px solid #ccc;
+            margin:10px auto;
+            font-size: 20px;
+            font-family: 'Jua', sans-serif;
+            border: none;
+        }
+        table.board tr{
+            height: 50px;
+        }
+        table.board th{
+            background-color: deeppink;
+        }
+        table.board td{
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="board">
+        <tr>
+            <th>작성시각</th>
+            <td>${BVIEW.b_time}</td>
+            <th>작성일</th>
+            <td>${BVIEW.b_date}</td>
+        </tr>
+        <tr>
+            <th>작성자</th>
+            <td colspan="3">${BVIEW.b_auth}</td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td colspan="3">${BVIEW.b_title}</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td colspan="3">${fn:replace(BVIEW.b_content,newLine,"<br/>")}</td>
+        </tr>
+        <c:if test="${not empty BVIEW.board_files}">
+            <tr>
+                <th>파일</th>
+                <td colspan="3">
+                    <div>
+                        <c:forEach items="${BVIEW.board_files}" var="file">
+                            <div>
+                                <img src="${rootPath}/images/${file.file_name}">						
+                            </div>
+                        </c:forEach>				
+                    </div>
+                </td>
+            </tr>
+        </c:if>
+    </table>
+    <div class="button">
+        <button>수정</button>
+        <button id="btn_delete">삭제</button>
+    </div>
+</body>
+</html>

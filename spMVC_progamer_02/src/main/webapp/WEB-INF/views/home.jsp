@@ -8,26 +8,25 @@
 <meta charset="UTF-8">
 <!-- css파일 모아놓는곳 -->
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/header.css?ver=20190806">
+	href="${rootPath}/css/header.css?ver=2019080702">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/footer.css?ver=20190729">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/main1.css?ver=20190729">
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/join.css?ver=20190729">
+	href="${rootPath}/css/join.css?ver=2019080702">
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/login.css?ver=20190729">
+	href="${rootPath}/css/login.css?ver=2019080702">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/list.css?ver=20190729">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/grid.css?ver=20190806">
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/button.css?ver=20190806">
+	href="${rootPath}/css/button.css?ver=20190807">
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/table.css?ver=2019080602">		
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	href="${rootPath}/css/table.css?ver=20190807">		
+<link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--  -->
 </head>
 
 <body>

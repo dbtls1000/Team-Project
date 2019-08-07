@@ -45,7 +45,7 @@
 	
 	div.modal-header,div.modal-footer{
 		padding:2px 16px;
-		background-color: #5cbb5c;
+		background-color: skyblue;
 		color: white;
 	}
 	div.modal-header{
@@ -59,6 +59,11 @@
 	$(function () {
 		$(".modal-close").click(function () {
 			$("#modal-box").css("display","none")
+		})
+		$(document).keyup(function(event){
+			if(event.keyCode == 27){
+				$("#modal-box").css("display","none")
+			}
 		})
 	})
 </script>

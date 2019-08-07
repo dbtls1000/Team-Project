@@ -2,6 +2,7 @@ package com.biz.progamer.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Select;
 
@@ -18,7 +19,8 @@ public interface FileDao {
 	@InsertProvider(value=FileSQL.class,method="file_insert_sql")
 	public int insert(FileVO fileVO);
 	
-	
+	@Delete(" DELETE FROM tbl_file WHERE file_seq = #{file_seq} ")
+	public void delete(long file_seq);
 	
 	
 }

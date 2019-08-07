@@ -6,7 +6,7 @@ div.button {
 }
 
 div.button button {
-	background-color: mediumspringgreen;
+	background-color: #004080;
 	padding: 6px 12px;
 	font-weight: bold;
 	font-size: 15px;
@@ -14,7 +14,7 @@ div.button button {
 }
 
 div.button button:hover {
-	background-color: black;
-	color: mediumspringgreen;
+	background-color: white;
+	color: #004080;
 	transition-duration: 0.3s;
 }

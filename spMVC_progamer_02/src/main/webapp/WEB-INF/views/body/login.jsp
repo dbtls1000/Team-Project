@@ -2,14 +2,33 @@
     pageEncoding="UTF-8"%>
     	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />	
+<script>
+	$(function(){
+		$("#login_join").click(function(){
+			$("#join-menu").click()
+		})
+		
+	})
+</script>
 <body>
     <article class="login-body">
-        <form class="login-form2" action="${rootPath}/member/login" method="POST">
-            <h2>로그인</h2>
-            <input type="text" name="m_userid" id="m_userid" placeholder="사용자 ID">
-            <input type="password" name="m_password" id="m_password" placeholder="Password">
-            <button id="btn-login">로그인</button>
-            <button type="button" id="btn-join">회원가입</button>
+        <form class="login-form" action="${rootPath}/member/login" method="POST">
+            <div class="main-box">
+                <div class="content">
+                    <h2>로그인</h2>
+                </div>
+                <div class="input">
+                    <input type="text" name="m_userid" id="m_userid" placeholder="사용자 ID">
+                </div>
+                <div class="input">
+                    <input type="password" name="m_password" id="m_password" placeholder="Password">
+                </div>
+                <div>
+                	<button class="btn_login" type="button">ID/비밀번호찾기</button>
+                    <button class="btn_login" type="button" id="login_join">회원가입</button>
+                    <button class="btn_login" id="btn-join">로그인</button>
+                </div>
+            </div>
         </form>
     </article>
 </body>

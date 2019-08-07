@@ -1,43 +1,44 @@
 @charset "UTF-8";
 
-fieldset{
-    width:50%;
-    padding: 20px;
+fieldset.join{
+    width: 25%;
     margin: 15px auto;
-    border-radius: 20px;
-    background-color: #ffffff;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    padding: 15px;
+    font-family: 'Jua', sans-serif;
+}
+fieldset.join legend{
+    font-size: 24px;
     text-align: center;
-    box-shadow: 5px 5px 5px 5px rgba(65, 65, 65, 0.2);
-}
-legend{
-    font-weight: bold;
-    background-color: #fff;
-    color: black;
-}
-div.div1 {
-    display: flex;
 }
 div.div1 label{
-    display: block;
-    width: 130px;
-    text-align: right;
-    margin: 8px;
-    padding: 5px;
-    font-weight: bold;
-    color: black;
- }
- div.div1 input{
-    background-color: #ffffff;
-    color: black;
-    border:3px solid rgba(65, 65, 65, 0.2);
-    border-radius: 5px;
-    margin-bottom:5px;
-    width: 70%;
-
+    font-size: 18px;
+    padding: 5px 0 5px 0;
 }
-div.div input:focus{
-    background-color: #ffffff;
-    border-color: black;
-    width: 60%;
-    transition: 0.2s;
+div.div1 input{
+    width:70%;
+    height: 20px;
+    margin-bottom: 5px;
+    border: 1.5px solid lightseagreen;
+    font-family: 'Jua', sans-serif;
+}
+div.div1 input:focus{
+    width:80%;
+    background-color: lightblue;
+}
+div.button{
+    text-align: right;
+}
+div.button button{
+    background-color: darkslateblue;
+    color: ghostwhite;
+    font-size: bold;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+div.button button:hover{
+    background-color: ghostwhite;
+    color: darkslateblue;
+    transition-duration: 0.3s;
 }

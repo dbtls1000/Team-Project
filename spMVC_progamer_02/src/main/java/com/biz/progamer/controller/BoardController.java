@@ -16,8 +16,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.biz.progamer.model.BoardDto;
 import com.biz.progamer.model.BoardVO;
 import com.biz.progamer.service.BoardService;
+import com.biz.progamer.service.FileService;
+
+import lombok.extern.slf4j.Slf4j;
 
 
+@Slf4j
 @Controller
 @SessionAttributes("boardVO")
 @RequestMapping(value="/board")
@@ -25,6 +29,8 @@ public class BoardController {
 	
 	@Autowired
 	BoardService bService;
+	@Autowired
+	FileService fService;
 	
 	@ModelAttribute("boardVO")
 	public BoardVO newBoardVO() {
@@ -40,13 +46,23 @@ public class BoardController {
 		
 	}
 	
+	@RequestMapping(value="/view",method=RequestMethod.GET)
+	public String view(@RequestParam long b_seq, Model model) {
+		BoardDto bDto = bService.getContent(b_seq);
+		log.debug("파일이름"+bDto.getB_files());
+		model.addAttribute("BVIEW",bDto);
+		model.addAttribute("BODY","BOARD_VIEW");
+		return "home";
+	}
+	
+	// write부분
 	@RequestMapping(value="/write",method=RequestMethod.GET)
 	public String write(@ModelAttribute("boardVO") BoardVO boardVO, Model model) {
 		
 		
 		LocalDateTime ldt = LocalDateTime.now();
 		String curDate = ldt.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString();
-		String curTime = ldt.format(DateTimeFormatter.ofPattern("HH-mm-ss")).toString();
+		String curTime = ldt.format(DateTimeFormatter.ofPattern("HH:mm:ss")).toString();
 		
 		boardVO.setB_date(curDate);
 		boardVO.setB_time(curTime);
@@ -62,6 +78,8 @@ public class BoardController {
 		
 		return "redirect:/board/list";
 	}
+	
+	// update 부분
 	@RequestMapping(value="/update",method=RequestMethod.GET)
 	public String update(@RequestParam long b_seq,Model model) {
 		BoardDto bDto = bService.getContent(b_seq);
@@ -70,11 +88,16 @@ public class BoardController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/view",method=RequestMethod.GET)
-	public String view(@RequestParam long b_seq, Model model) {
-		BoardVO bVO = bService.findBySeq(b_seq);
-		model.addAttribute("BVIEW",bVO);
-		model.addAttribute("BODY","BOARD_VIEW");
-		return "home";
+	@RequestMapping(value="/update",method=RequestMethod.POST)
+	public String update(@ModelAttribute BoardVO boardVO,Model model) {
+		bService.update(boardVO);
+		return "redirect:/board/list";
+	}
+	
+	@RequestMapping(value="/delete",method=RequestMethod.GET)
+	public String delete(@RequestParam long b_seq,Model model) {
+		
+		bService.delete(b_seq);
+		return "redirect:/board/list";
 	}
 }

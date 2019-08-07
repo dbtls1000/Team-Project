@@ -15,7 +15,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public class FileVO {
 	private long file_seq;
-	private long board_file_seq;
+	private long file_board_seq;
 	private String file_origin_name;
 	private String file_name;
 }

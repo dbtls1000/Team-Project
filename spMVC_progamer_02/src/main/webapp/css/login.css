@@ -1,65 +1,66 @@
-
 @charset "UTF-8";
 
+article.login-body .login-form {
+	width: 500px;
+	text-align: center;
+	background-color: ghostwhite;
+	margin: 50px auto;
+	border: 2px solid cornflowerblue;
+	border-radius: 15px;
+}
 
-article.login-body .login-form2{
-    width:300px;
-    padding:40px;
-    /*position:absolute;
-    top:50%;
-    left:50%;*/
-    margin: 50px auto;
-    background-color: #ffffff;
-    text-align: center;
-    z-index: 10;
-    border-radius: 10px;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px rgba(65, 65, 65, 0.2);
+.login-form input {
+	border: 0;
+	background-color: #ffffff;
+	margin: 8px auto;
+	text-align: center;
+	border: 2px solid rgba(65, 65, 65, 0.2);
+	padding: 14px 16px;
+	width: 250px;
+	outline: none;
+	color: black;
+	border-radius: 5px;
+	font-family: 'Jua', sans-serif;
+}
 
+.btn_login {
+	position: relative;
+	background: rgb(10, 200, 105);
+	color: #fff;
+	border: none;
+	height: 30px;
+	margin: 10px auto;
+	padding: 4px 14px;
+	cursor: pointer;
+	transition: 600ms ease all;
+	outline: none;
+	border-radius: 3px;
 }
-article.login-body .login-form2 h2{
-    color: black;
-    font-weight: 500;
-}
-.login-form2 input{
-    border: 0;
-    background-color: #ffffff;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border : 2px solid rgba(65, 65, 65, 0.2);
-    padding: 14px 16px;
-    width: 200px;
 
-    outline:none;
-    color: black;
-    border-radius: 5px;
+.btn_login:before, .btn_login:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: rgb(10, 200, 105);
+	transition: 400ms ease all;
+}
 
-    transition: 0.2s;
+.btn_login:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
 }
-.login-form2 input:focus{
-    
-    border-color:#000000;
-}
-.login-form2 button{
-    border:0;
-    background-color: none;
-    
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid rgba(65, 65, 65, 0.2);
-    padding: 14px 16px;
-    outline : none;
-    border-radius: 25px;
-    cursor: pointer;
-    color: white;
-    width: 150px;
-    transition: 0.2s;
-}
-.login-form2 button#btn-join{
-    margin-top:2px;
-}
-.login-form2 button:hover{
-    background-color: #1f1f1f;
 
+.btn_login:hover {
+	background: ghostwhite;
+	color: rgb(10, 200, 105);
+}
+
+.btn_login:hover:before, .btn_login:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
 }

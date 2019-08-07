@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        article.login-body .login-form{
+            width:500px;
+            text-align: center;
+            background-color: ghostwhite;
+            margin: 50px auto;
+            border: 2px solid cornflowerblue;
+            border-radius: 15px;
+
+        }
+        .login-form input{
+            border: 0;
+            background-color: #ffffff;
+            margin: 8px auto;
+            text-align: center;
+            border : 2px solid rgba(65, 65, 65, 0.2);
+            padding: 14px 16px;
+            width: 250px;
+
+            outline:none;
+            color: black;
+            border-radius: 5px;
+        }
+
+        .btn_login {
+            position: relative;
+        	background: rgb(10, 200, 105);
+        	color: #fff;
+        	border: none;
+        	height: 30px;
+        	margin:10px auto;
+        	padding: 4px 14px;
+        	cursor: pointer;
+        	transition: 600ms ease all;
+        	outline: none;
+        	border-radius: 3px;
+        }
+
+        
+
+        .btn_login:before, .btn_login:after {
+            content: '';
+	        position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+        	background: rgb(10, 200, 105);
+        	transition: 400ms ease all;
+        }
+
+        .btn_login:after {
+        	right: inherit;
+        	top: inherit;
+        	left: 0;
+        	bottom: 0;
+        }
+
+        .btn_login:hover {
+        	background: ghostwhite;
+        	color: rgb(10, 200, 105);
+        }
+        .btn_login:hover:before, .btn_login:hover:after {
+        	width: 100%;
+        	transition: 800ms ease all;
+        }
+</style>
+</head>
+<body>
+    <article class="login-body">
+        <form class="login-form" action="${rootPath}/member/login" method="POST">
+            <div class="main-box">
+                <div class="content">
+                    <h2>로그인</h2>
+                </div>
+                <div class="input">
+                    <input type="text" name="m_userid" id="m_userid" placeholder="사용자 ID">
+                </div>
+                <div class="input">
+                    <input type="password" name="m_password" id="m_password" placeholder="Password">
+                </div>
+                <div>
+                    <button class="btn_login" type="button">회원가입</button>
+                    <button class="btn_login" type="button">ID/비밀번호찾기</button>
+                    <button class="btn_login" id="btn-join">로그인</button>
+                </div>
+            </div>
+        </form>
+    </article>
+</body>
+</html>

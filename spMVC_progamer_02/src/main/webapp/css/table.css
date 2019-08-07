@@ -63,4 +63,5 @@ table.profile tr.career {
 }
 table.profile #career {
 	font-size:23px;
+	height: 200px;
 }

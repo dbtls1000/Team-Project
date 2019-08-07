@@ -23,5 +23,5 @@ public class BoardDto {
 	private String b_title;//	nVARCHAR2(50)	,
 	private String b_content;//	nVARCHAR2(50)
 	
-	private List<FileVO> board_files;
+	private List<FileVO> b_files;
 }
