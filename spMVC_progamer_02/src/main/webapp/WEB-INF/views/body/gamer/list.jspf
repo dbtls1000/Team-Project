@@ -8,7 +8,9 @@
 			let pg_num = $(this).attr("data-seq")
 			location.href="${rootPath}/gamer/profile?pg_num=" + pg_num
 		})
-		
+		if("${USER.m_role}" == "ADMIN" ){
+			$(".admin_button").show()
+		}
 	})
 </script>
     <table class="list">
@@ -40,3 +42,8 @@
     		</c:otherwise>
     	</c:choose>
     </table>
+    <div class="button">
+    	<button class="admin_button" style="display:none">등록</button>
+    	<button class="admin_button" id="btn_update" style="display:none">수정</button>
+    	<button class="admin_button" id="btn_delete" style="display:none">삭제</button>
+    </div>

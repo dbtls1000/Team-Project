@@ -71,10 +71,9 @@
 <nav class="search">
 	<ul>
 		<li><a href="${rootPath}/">Home</a></li>
-		<li><a href="#">새소식</a></li>
 		<li><a href="http://www.leagueoflegends.co.kr/?m=esports_intro&mod=esports_schedule"
 				 target="new">리그 일정</a></li>
-		<li><a href="#">리그 순위</a></li>
+		<li><a href="https://www.leagueoflegends.co.kr/?m=esports&mod=chams_rank&cate=1" target="new">리그 순위</a></li>
 		<li><a href="${rootPath}/gamer/list">선수DB</a></li>
 		<li><a href="${rootPath}/board/list">자유게시판</a></li>
 	</ul>

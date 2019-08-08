@@ -28,4 +28,5 @@ public class BoardVO {
 	private String b_content;//	nVARCHAR2(50)
 	
 	private List<MultipartFile> b_files;
+	private long b_viewcount;
 }

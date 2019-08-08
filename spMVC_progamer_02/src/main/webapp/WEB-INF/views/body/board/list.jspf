@@ -5,6 +5,7 @@
 	$(function(){
 		$(".board_view").click(function(){
 			let b_seq = $(this).attr("data-seq")
+			
 			location.href = "${rootPath}/board/view?b_seq=" + b_seq
 		})
 	})

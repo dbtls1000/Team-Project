@@ -67,6 +67,7 @@ public class BoardController {
 		boardVO.setB_date(curDate);
 		boardVO.setB_time(curTime);
 		
+		
 		model.addAttribute("boardVO",boardVO);
 		model.addAttribute("BODY","BOARD_WRITE");
 		return "home";

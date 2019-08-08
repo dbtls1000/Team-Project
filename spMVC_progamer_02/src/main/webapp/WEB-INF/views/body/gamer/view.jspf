@@ -7,6 +7,13 @@ $(function(){
 	}
 })
 </script>
+<style>
+	table.profile #image{
+		background-color: white;
+		width:250px;
+		height:200px;
+	}
+</style>
   <table class="profile">
         <tr>
             <td colspan="3" rowspan="4" id="image"><img src="${rootPath}/resources/images/${GAMER.pg_img}"></td>
@@ -37,7 +44,6 @@ $(function(){
         </tr>
     </table>
     <div class="button">
-    	<button class="admin_button" style="display:none">등록</button>
-    	<button class="admin_button" style="display:none">수정</button>
-    	<button class="admin_button" style="display:none">삭제</button>
+    	<button class="admin_button" id="btn_update" style="display:none">수정</button>
+    	<button class="admin_button" id="btn_delete" style="display:none">삭제</button>
     </div>

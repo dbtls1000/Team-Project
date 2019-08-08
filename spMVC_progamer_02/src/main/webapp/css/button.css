@@ -5,16 +5,67 @@ div.button {
 	text-align: center;
 }
 
-div.button button {
-	background-color: #004080;
-	padding: 6px 12px;
-	font-weight: bold;
-	font-size: 15px;
-	border-radius: 10px;
+div.button button{
+	position: relative;
+	
+	color: #fff;
+	border: none;
+	height: 30px;
+	margin: 10px auto;
+	padding: 4px 14px;
+	cursor: pointer;
+	transition: 600ms ease all;
+	outline: none;
+	border-radius: 3px;
+}
+div.button button{
+	background: rgb(10, 200, 105);
+}
+div.button #btn_delete{
+	background: #ef104e;
+}
+div.button #btn_update{
+	background: #2da0f7;
+}
+div.button button:before, div.button button:after,
+div.button #btn_delete:before, div.button #btn_delete:after,
+div.button #btn_update:before, div.button #btn_update:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	transition: 400ms ease all;
+}
+div.button button:before, div.button button:after{
+	background: rgb(10, 200, 105);
+}
+div.button #btn_delete:before, div.button #btn_delete:after{
+	background: #ef104e;
+}
+div.button #btn_update:before, div.button #btn_update:after{
+	background: #2da0f7;
+}
+div.button button:after, 
+div.button #btn_delete:after,
+div.button #btn_update:after{
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
 }
 
-div.button button:hover {
-	background-color: white;
-	color: #004080;
-	transition-duration: 0.3s;
+div.button button:hover,
+div.button #btn_delete:hover,
+div.button #btn_update:hover {
+	background: ghostwhite;
+	color: rgb(10, 200, 105);
+}
+
+div.button button:hover:before, div.button button:hover:after,
+div.button #btn_delete:hover:before, div.button #btn_delete:hover:after,
+div.button #btn_update:hover:before, div.button #btn_update:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
 }

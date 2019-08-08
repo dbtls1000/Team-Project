@@ -24,44 +24,58 @@ table.list tr:nth-child(even) {
 
 table.list #tr_head {
 	background-color: black;
-	color:white;
+	color: white;
 }
 
 table.profile {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 50%;
-	border: 1px solid #ccc;
 	margin: 10px auto;
 	font-size: 20px;
 	font-family: 'Jua', sans-serif;
 	text-align: center;
-	table-layout:fixed;
+	table-layout: fixed;
 }
 
 table.profile th {
-	wrap:nowrap;
+	wrap: nowrap;
 	background-color: chocolate
 }
 
 table.profile td {
 	background-color: beige;
-	
 }
 
 table.profile img {
 	min-height: 200px;
-	max-width:200px;
+	max-width: 200px;
 }
 
-table.profile #image {
-	background-color: white;
-}
 table.profile tr.career {
-	min-height:200px;
-	
+	min-height: 200px;
 }
+
 table.profile #career {
-	font-size:23px;
+	font-size: 23px;
 	height: 200px;
+}
+
+table.board {
+	width: 45%;
+	height: 200px;
+	margin: -3px auto;
+	background-color: white;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.board th {
+	width: 100px;
+	background-color: rgb(250, 223, 239);
+	height: 30px;
+}
+
+table.board td {
+	padding-left: 10px;
 }

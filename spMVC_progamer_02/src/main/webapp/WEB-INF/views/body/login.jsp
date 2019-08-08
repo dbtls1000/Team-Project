@@ -23,10 +23,10 @@
                 <div class="input">
                     <input type="password" name="m_password" id="m_password" placeholder="Password">
                 </div>
-                <div>
-                	<button class="btn_login" type="button">ID/비밀번호찾기</button>
-                    <button class="btn_login" type="button" id="login_join">회원가입</button>
-                    <button class="btn_login" id="btn-join">로그인</button>
+                <div class="button">
+                	<button type="button">ID/비밀번호찾기</button>
+                    <button type="button" id="login_join">회원가입</button>
+                    <button id="btn-join">로그인</button>
                 </div>
             </div>
         </form>

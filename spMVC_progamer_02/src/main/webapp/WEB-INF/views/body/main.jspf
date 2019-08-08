@@ -12,7 +12,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("SKT T1")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".griffin").on('click',function() {
@@ -25,7 +25,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("GRIFFIN")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".kz").on('click',function() {
@@ -38,7 +38,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("KZ DragonX")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".damwon").on('click',function() {
@@ -51,7 +51,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("DAMWON Gaming")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".sandbox").on('click',function() {
@@ -64,7 +64,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("SANDBOX Gaming")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".hanhwa").on('click',function() {
@@ -77,7 +77,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("Hanwha Life Esports")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".geng").on('click',function() {
@@ -90,7 +90,7 @@ $(function(){
 			$("#modal-body").html(result)
 			$(".modal-header h2").html("Gen.G Esports")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".afreeca").on('click',function() {
@@ -101,9 +101,9 @@ $(function(){
 		})
 		.done(function(result) {
 			$("#modal-body").html(result)
-			$(".modal-header h2").html("Afreeca_Freecs")
+			$(".modal-header h2").html("Afreeca Freecs")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".kt").on('click',function() {
@@ -114,9 +114,9 @@ $(function(){
 		})
 		.done(function(result) {
 			$("#modal-body").html(result)
-			$(".modal-header h2").html("KT_Rolster")
+			$(".modal-header h2").html("KT Rolster")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	$(".jinair").on('click',function() {
@@ -127,9 +127,9 @@ $(function(){
 		})
 		.done(function(result) {
 			$("#modal-body").html(result)
-			$(".modal-header h2").html("Jin_Air_Greenwings")
+			$(".modal-header h2").html("Jin Air Greenwings")
 			$(".modal-header h2").css("text-align","center")
-			$(".modal-header h2").css("color","lightblue")
+			$(".modal-header h2").css("color","black")
 		})
 	})
 	
