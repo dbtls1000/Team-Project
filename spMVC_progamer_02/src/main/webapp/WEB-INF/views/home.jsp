@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <!-- css파일 모아놓는곳 -->
 <link rel="stylesheet" type="text/css"
-	href="${rootPath}/css/header.css?ver=20190808">
+	href="${rootPath}/css/header.css?ver=20190809">
 <link rel="stylesheet" type="text/css"
 	href="${rootPath}/css/footer.css?ver=20190729">
 <link rel="stylesheet" type="text/css"
@@ -51,6 +51,9 @@
 		</c:when>
 		<c:when test="${BODY == 'SEARCH'}">
 			<%@ include file="/WEB-INF/views/body/gamer/search.jspf"%>
+		</c:when>
+		<c:when test="${BODY == 'GAME'}">
+			<%@ include file="/WEB-INF/views/body/game.jspf"%>
 		</c:when>
 		<c:otherwise>
 			<%@ include file="/WEB-INF/views/body/main.jspf"%>

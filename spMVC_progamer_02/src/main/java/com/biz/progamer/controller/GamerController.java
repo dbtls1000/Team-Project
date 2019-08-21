@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.biz.progamer.model.Paging;
 import com.biz.progamer.model.ProgamerVO;
 import com.biz.progamer.service.ProgamerService;
 
@@ -24,10 +24,13 @@ public class GamerController {
 	@Autowired
 	ProgamerService pgService;
 	
-	@RequestMapping(value="/list",method=RequestMethod.GET)
-	public String view_gamer(@ModelAttribute ProgamerVO pgVO, Model model) {
-		List<ProgamerVO> pgList = pgService.selectAll();
+	@RequestMapping(value="/list",method= {RequestMethod.POST,RequestMethod.GET})
+	public String view_gamer(@ModelAttribute ProgamerVO pgVO,@ModelAttribute Paging paging, Model model) {
+		List<ProgamerVO> pgList = pgService.selectPaging(paging);
+		paging.setTotalCount(pgService.selectTotalPaging());
+		
 		model.addAttribute("GLIST",pgList);
+		model.addAttribute("p",paging);
 		model.addAttribute("BODY","GAMER_LIST");
 		return "home";
 	}
@@ -62,6 +65,13 @@ public class GamerController {
 		log.debug("선수 이름 : " + pg_gamer);
 		model.addAttribute("SEARCH",pgList);
 		model.addAttribute("BODY","SEARCH");
+		return "home";
+	}
+	
+	@RequestMapping(value="/game",method=RequestMethod.GET)
+	public String game(Model model) {
+		
+		model.addAttribute("BODY","GAME");
 		return "home";
 	}
 }

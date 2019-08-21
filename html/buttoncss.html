@@ -9,21 +9,24 @@
     <script src='main.js'></script>
     <style>
         div.button{
-            padding: 0.5rem;
             text-align: center;
         }
         div.button button{
-            background-color: mediumspringgreen;
-            padding: 6px 12px;
-            font-weight: bold;
-            font-size: 15px;
-            border-radius: 10px;
+            position: relative;
+            background: blueviolet;
+            border: none;
+            padding: 10px 16px;
         }
         div.button button:hover{
-            background-color: black;
-            color:mediumspringgreen;
-            transition-duration: 0.3s;
+            background: gold;
         }
+        div.button button::after, button:before{
+            content: "";
+            position: absolute;
+            background: blueviolet;
+            height: 2px;
+        }
+        
     </style>
 </head>
 <body>

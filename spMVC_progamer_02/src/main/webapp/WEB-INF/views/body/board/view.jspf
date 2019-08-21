@@ -6,7 +6,11 @@
 <% pageContext.setAttribute("newLine", "\r\n"); %>
 <script>
 	$(function(){
+		$("#btn_update").click(function(){
+			location.href="${rootPath}/board/update?b_seq=${BVIEW.b_seq}"
+		})
 		$("#btn_delete").click(function () {
+			if(confirm("정말로 삭제할까요?"))
 			location.replace("${rootPath}/board/delete?b_seq=${BVIEW.b_seq}")
 		})
 	})
@@ -63,5 +67,5 @@
 </table>
 <div class="button">
 	<button id="btn_update">수정</button>
-	<button id="btn_delete">삭제</button>
+	<button type="button" id="btn_delete">삭제</button>
 </div>

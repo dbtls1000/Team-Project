@@ -8,6 +8,7 @@
 			
 			location.href = "${rootPath}/board/view?b_seq=" + b_seq
 		})
+		
 	})
 </script>
 <table class="list">

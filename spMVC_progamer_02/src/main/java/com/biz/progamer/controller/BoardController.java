@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.biz.progamer.model.BoardDto;
 import com.biz.progamer.model.BoardVO;
+import com.biz.progamer.model.MemberVO;
 import com.biz.progamer.service.BoardService;
 import com.biz.progamer.service.FileService;
 
@@ -57,8 +60,16 @@ public class BoardController {
 	
 	// write부분
 	@RequestMapping(value="/write",method=RequestMethod.GET)
-	public String write(@ModelAttribute("boardVO") BoardVO boardVO, Model model) {
+	public String write(@ModelAttribute("boardVO") BoardVO boardVO, Model model,HttpSession httpSession) {
 		
+		MemberVO memberVO = (MemberVO) httpSession.getAttribute("USER");
+		
+		if(memberVO != null) {
+			boardVO.setB_auth(memberVO.getM_nick());
+		} 
+		if(memberVO == null) {
+			model.addAttribute("LOGIN","NOTLOGIN");
+		}
 		
 		LocalDateTime ldt = LocalDateTime.now();
 		String curDate = ldt.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString();
@@ -82,8 +93,13 @@ public class BoardController {
 	
 	// update 부분
 	@RequestMapping(value="/update",method=RequestMethod.GET)
-	public String update(@RequestParam long b_seq,Model model) {
+	public String update(@RequestParam long b_seq,Model model,HttpSession httpSession) {
+		MemberVO memberVO = (MemberVO) httpSession.getAttribute("USER");
+		
 		BoardDto bDto = bService.getContent(b_seq);
+//		if(!memberVO.getM_userid().equalsIgnoreCase(bDto.getB_auth())) {
+//			model.addAttribute("LOGIN","AUTH");
+//		}
 		model.addAttribute("boardVO",bDto);
 		model.addAttribute("BODY","BOARD_WRITE");
 		return "home";

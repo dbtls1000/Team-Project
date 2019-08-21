@@ -1,6 +1,7 @@
 package com.biz.progamer.service;
 
 import com.biz.progamer.mapper.ProgamerDao;
+import com.biz.progamer.model.Paging;
 import com.biz.progamer.model.ProgamerVO;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class ProgamerService {
 		return pgList;
 	}
 
+	
 	public List<ProgamerVO> findByNameNick(String pg_gamer) {
 		// TODO Auto-generated method stub
 		List<ProgamerVO> pgList = pgDao.findByNameNick(pg_gamer);
@@ -35,4 +37,17 @@ public class ProgamerService {
 		ProgamerVO progamerVO = pgDao.findByNum(pg_num);
 		return progamerVO;
 	}
+
+	public List<ProgamerVO> selectPaging(Paging paging) {
+		// TODO Auto-generated method stub
+		List<ProgamerVO> pgList = pgDao.selectPaging(paging);
+		return pgList;
+	}
+
+	public int selectTotalPaging() {
+		// TODO Auto-generated method stub
+		int ret = pgDao.selectTotalPaging();
+		return ret;
+	}
+
 }
