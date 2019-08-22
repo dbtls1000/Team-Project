@@ -14,8 +14,8 @@ public interface ProgamerDao {
 
 	@Select(" SELECT * FROM (SELECT ROWNUM RNUM, PG.* FROM "
 			+ " (SELECT * FROM tbl_progamer " 
-			+ " ORDER BY pg_seq ) PG ) " 
-			+ " WHERE RNUM BETWEEN {start} AND {last} ")
+			+ " ORDER BY pg_num ) PG ) " 
+			+ " WHERE RNUM BETWEEN 0 AND 150 ")
 	public List<ProgamerVO> selectPaging(Paging paging);
 	
 	@Select(" SELECT COUNT(*) FROM tbl_progamer ")

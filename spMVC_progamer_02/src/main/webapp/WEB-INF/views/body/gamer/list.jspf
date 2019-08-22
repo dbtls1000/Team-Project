@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="${rootPath}/resources/js/paging.js" type="text/javascript"></script>
 <script>
 	$(function(){
 		
@@ -17,6 +14,10 @@
 		}
 	})
 </script>
+	<select id="listCount" name="listCount" onchange="listCount;">
+		<option value="5">5</option>
+		<option value="10">10</option>
+	</select>
     <table class="list">
     	<tr class="tr_head">
     		<th>NO.</th>
@@ -51,6 +52,32 @@
     	<button class="admin_button" id="btn_update" style="display:none">수정</button>
     	<button class="admin_button" id="btn_delete" style="display:none">삭제</button>
     </div>
-
+	<ul class="pagination">
+		<c:if test="${paging.pageStartNum ne 1}">
+			<!-- 처음으로 -->
+			<li><a onclick='prePage(${paging.pageCount+1},${paging.pageCount})'>처음</a></li>
+			<!-- 이전페이지 -->
+			<li><a onclick='prePage(${paging.pageStartNum},${paging.pageCount})'>이전</a></li>
+		</c:if>
+		<!-- 페이지번호 -->
+		<c:forEach var="i" begin="${paging.pageStartNum}" end="${paging.pageLastNum}" step="1">
+			<li class="pageIndex${i}"><a onclick='pageIndex(${i})'>${i}</a></li>
+		</c:forEach>
+		
+		<c:if test="${paging.lastCheck}">
+			<!-- 다음페이지 -->
+			<li><a onclick='nextPage(${paging.pageStartNum},${paging.totalCount},
+							${paging.listCount},${paging.pageCount})'>다음</a></li>
+			<!-- 마지막으로 -->
+			<li><a onclick='pageLast(${paging.pageStartNum},${paging.totalCount},
+							${paging.listCount},${paging.pageCount})'>마지막</a></li>
+		</c:if>
+	</ul>
+	<form action="${rootPath}/gamer/list" method="POST" id='frmPaging'>
+		<!-- 출력할 페이지번호,페이지 시작번호,출력할 리스트개수 -->
+		<input type="hidden" name="page" id="page" value="${paging.page}">
+		<input type="hidden" name="pageStartNum" id="pageStartNum" value="${paging.pageStartNum}">
+		<input type="hidden" name="listCount" id="listCount" value="${paging.listCount}">
+	</form>
 
     

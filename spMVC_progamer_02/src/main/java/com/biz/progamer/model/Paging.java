@@ -1,11 +1,11 @@
 package com.biz.progamer.model;
 
 public class Paging {
-	private int pageCount;
-	private int page;
-	private int pageStartNum;
-	private int listCount;
-	private int totalCount;
+	private int pageCount; // 출력할 페이지 개수
+	private int page; // 출력할 페이지 번호
+	private int pageStartNum; // 페이시 시작 번호
+	private int listCount; // 한 페이지에 출력할 리스트 개수
+	private int totalCount; // 리스트 총 개수
 	
 	{
 		pageCount = 10;
